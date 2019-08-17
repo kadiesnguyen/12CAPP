@@ -25,4 +25,9 @@ export class Account {
 
     }
 
+    GetToken()
+    {
+        return this.token;
+    }
+
 }

@@ -9,7 +9,7 @@ export class Server {
 	}
 
 	sendRequest(subLink:string,postData:object,callback){
-		console.log("I do something useful!");
+		console.log("sendRequest:"+JSON.stringify(postData));
 		var headers = new HttpHeaders();
 		headers.append("Accept", 'application/json');
 		headers.append('Content-Type', 'application/json' );
@@ -19,7 +19,7 @@ export class Server {
 			if(callback != null){
 				callback(data);
 			}
-		  console.log(data);
+		  console.log(JSON.stringify(data));
 		 }, error => {
 		  console.log(error);
 		})

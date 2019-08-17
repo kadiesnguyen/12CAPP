@@ -17,18 +17,19 @@
                 <div class="icon_box" item-start>
                     <img src="assets/imgs/ic_phone.png">
                 </div>
-                <ion-input type="text" placeholder="{{'phone_number' | translate}}"></ion-input>
+                <ion-input [(ngModel)]="id" type="text" placeholder="{{'phone_number' | translate}}"></ion-input>
             </ion-item>
 
             <ion-item>
                 <div class="icon_box" item-start>
                     <img src="assets/imgs/ic_password.png">
                 </div>
-                <ion-input type="password" placeholder="{{'password' | translate}}"></ion-input>
+                <ion-input [(ngModel)]="pw" type="password" placeholder="{{'password' | translate}}"></ion-input>
                 <h3 item-end (click)="forgotpassword()">{{'forgot' | translate}}</h3>
             </ion-item>
         </ion-list>
-        <button text-uppercase ion-button block class="btn" (click)="tabs()"> {{'sign_in' | translate}}</button>
+        <button text-uppercase ion-button block class="btn" (click)="login()"> {{'sign_in' | translate}}</button>
+        <ion-label text-center no-margin>{{error_login}}</ion-label>
     </div>
 </ion-content>
 <ion-footer no-border>
