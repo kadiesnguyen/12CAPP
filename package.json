@@ -1,5 +1,5 @@
 {
-  "name": "PAY 12C",
+  "name": "PAY12C",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -15,7 +15,7 @@
     "@angular-devkit/build-optimizer": "^0.6.8",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
-    "@angular/compiler-cli": "5.2.11",
+    "@angular/compiler-cli": "^8.2.2",
     "@angular/core": "5.2.11",
     "@angular/forms": "5.2.11",
     "@angular/http": "5.2.11",

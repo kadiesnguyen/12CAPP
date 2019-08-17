@@ -33,7 +33,8 @@ import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TransactionPage } from '../pages/transaction/transaction';
 import { VerificationPage } from '../pages/verification/verification';
-
+import { Server } from '../providers/server/server';
+import { Account} from '../providers/server/account';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -116,6 +117,8 @@ export function createTranslateLoader(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
+	Server,
+    Account,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
