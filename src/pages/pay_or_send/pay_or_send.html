@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title></ion-title>
+    </ion-navbar>
+
+    <div class="form">
+        <ion-list no-lines>
+            <ion-item>
+                <ion-input type="text" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+                <h3 item-end>
+                    <ion-icon class="material-icons">account_box </ion-icon>
+                </h3>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-header>
+
+<ion-content>
+    <div class="qr_code_scanner_container">
+        <img src="assets/imgs/qr_scan.png" class="qr_scan">
+        <h2 text-center>{{'scan_qr_code' | translate}}</h2>
+        <div class="scanner">
+            <div class="scan_line"></div>
+            <img src="assets/imgs/qr_code_scanner.png">
+        </div>
+    </div>
+</ion-content>
+<ion-footer no-border text-center>
+    <ion-icon class="material-icons">flash_off</ion-icon>
+    <ion-icon class="material-icons">photo</ion-icon>
+</ion-footer>

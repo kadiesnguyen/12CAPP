@@ -1,0 +1,45 @@
+<ion-header class="header_bg bg-transparent">
+    <ion-navbar>
+        <ion-title>{{'account' | translate}}</ion-title>
+    </ion-navbar>
+    <div class="profile_box d-flex" (click)="myprofile()">
+        <div class="profile_img">
+            <img src="assets/imgs/profile_pic.png">
+        </div>
+        <div class="name_box">
+            <h2>12C Pay</h2>
+            <h3>{{'view_profile' | translate}}</h3>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg-color">
+    <ion-list no-lines>
+
+        <ion-item (click)="notification()">
+            <div class="icon_box" item-start>
+                <img src="assets/imgs/ic_invite.png">
+            </div>
+            <h2>{{'notifications' | translate}}</h2>
+        </ion-item>
+        <ion-item (click)="help()">
+            <div class="icon_box" item-start>
+                <img src="assets/imgs/ic_help.png">
+            </div>
+            <h2>{{'need_help' | translate}}</h2>
+        </ion-item>
+        <ion-item>
+            <div class="icon_box" item-start>
+                <img src="assets/imgs/ic_rate.png">
+            </div>
+            <h2>{{'rate_us' | translate}}</h2>
+        </ion-item>
+        <ion-item (click)="condition()">
+            <div class="icon_box" item-start>
+                <img src="assets/imgs/ic_guideline.png">
+            </div>
+            <h2>{{'terms_conditions' | translate}}</h2>
+        </ion-item>
+
+    </ion-list>
+</ion-content>

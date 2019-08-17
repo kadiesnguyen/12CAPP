@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <ion-icon class="material-icons" (click)="dismiss()">clear</ion-icon>
+        </ion-title>
+    </ion-navbar>
+    <div class="form">
+        <ion-list no-lines>
+            <ion-item>
+                <ion-input type="text" placeholder="{{'enter_promocode' | translate}}"></ion-input>
+            </ion-item>
+            <button ion-button block class="btn" (click)="dismiss()"> {{'apply' | translate}}</button>
+        </ion-list>
+    </div>
+</ion-header>
+
+<ion-content class="bg-color">
+    <ion-list no-lines>
+        <h3>{{'offers' | translate}}</h3>
+        <ion-item>
+            <h2>
+                Freerecharge50
+            </h2>
+            <p>Recharge with $5.00 and get 10% instant cashback in 24 hours.</p>
+            <p>{{'terms_conditions_apply' | translate}}</p>
+        </ion-item>
+        <ion-item>
+            <h2>
+                Next5Offer
+            </h2>
+            <p>Recharge with $5.00 and get 10% instant cashback in 24 hours.</p>
+            <p>{{'terms_conditions_apply' | translate}}</p>
+        </ion-item>
+        <ion-item>
+            <h2>
+                10On10bonanza
+            </h2>
+            <p>Recharge with $5.00 and get 10% instant cashback in 24 hours.</p>
+            <p>{{'terms_conditions_apply' | translate}}</p>
+        </ion-item>
+        <ion-item>
+            <h2>
+                winter100
+            </h2>
+            <p>Recharge with $5.00 and get 10% instant cashback in 24 hours.</p>
+            <p>{{'terms_conditions_apply' | translate}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

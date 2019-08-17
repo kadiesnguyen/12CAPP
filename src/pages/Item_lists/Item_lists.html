@@ -1,0 +1,473 @@
+<ion-header class="header_bg bg-transparent">
+    <ion-navbar>
+        <ion-title>Men's Clothings
+            <span class="icon_box end">
+                <ion-icon><img src="assets/imgs/ic_search_wt.png"></ion-icon>
+                <ion-icon><img src="assets/imgs/ic_cart_wt.png">
+                    <ion-badge item-end>2</ion-badge>
+                </ion-icon>
+            </span>
+        </ion-title>
+    </ion-navbar>
+    <ion-scroll scrollX="true">
+        <ion-segment [(ngModel)]="categories">
+            <ion-segment-button value="shirts">
+                Shirts
+            </ion-segment-button>
+            <ion-segment-button value="t-shirts">
+                T-shirts
+            </ion-segment-button>
+            <ion-segment-button value="jeans">
+                Jeans
+            </ion-segment-button>
+            <ion-segment-button value="trouser">
+                Trouser
+            </ion-segment-button>
+            <ion-segment-button value="shirts_b">
+                Shirts
+            </ion-segment-button>
+            <ion-segment-button value="t-shirts_b">
+                T-shirts
+            </ion-segment-button>
+            <ion-segment-button value="jeans_b">
+                Jeans
+            </ion-segment-button>
+            <ion-segment-button value="trouser_b">
+                Trouser
+            </ion-segment-button>
+        </ion-segment>
+    </ion-scroll>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="banner">
+        <div class="banner_img">
+            <img src="assets/imgs/banner3.png">
+        </div>
+        <div class="banner_text" text-right>
+            <h3 text-uppercase>Winter Sale</h3>
+            <h2>Flat 50% OFF</h2>
+            <h4 text-uppercase>{{'shop_now' | translate}}</h4>
+        </div>
+    </div>
+
+    <div class="tab_container" [ngSwitch]="categories">
+        <ion-row *ngSwitchCase="'shirts'">
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f2.png">
+                    </div>
+                    <h2>Spyworn Blue cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f3.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f2.png">
+                    </div>
+                    <h2>Spyworn Blue cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f3.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngSwitchCase="'t-shirts'">
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f3.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f2.png">
+                    </div>
+                    <h2>Spyworn Blue cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngSwitchCase="'jeans'">
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f3.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngSwitchCase="'trouser'">
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f2.png">
+                    </div>
+                    <h2>Spyworn Blue cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngSwitchCase="'shirts_b'">
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f2.png">
+                    </div>
+                    <h2>Spyworn Blue cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f3.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f2.png">
+                    </div>
+                    <h2>Spyworn Blue cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f3.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngSwitchCase="'t-shirts_b'">
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f3.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f4.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f2.png">
+                    </div>
+                    <h2>Spyworn Blue cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngSwitchCase="'jeans_b'">
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f3.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngSwitchCase="'trouser_b'">
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f1.png">
+                    </div>
+                    <h2>Spyworn white cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+            <ion-col col-6 (click)="item_info()">
+                <div class="item-box">
+                    <div class="img_box">
+                        <img src="assets/imgs/f2.png">
+                    </div>
+                    <h2>Spyworn Blue cotton shirt Xl</h2>
+                    <p>$9.99</p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

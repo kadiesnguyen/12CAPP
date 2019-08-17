@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <span class="icon_box end">
+                <ion-icon><img src="assets/imgs/ic_cart.png">
+                    <ion-badge item-end>2</ion-badge>
+                </ion-icon>
+            </span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="banner">
+        <ion-slides pager autoplay=3000>
+            <ion-slide>
+                <div class="img_box">
+                    <img src="assets/imgs/f2.png">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="img_box">
+                    <img src="assets/imgs/f2.png">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="img_box">
+                    <img src="assets/imgs/f2.png">
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+
+    <div class="form">
+        <ion-list no-lines>
+            <ion-item>
+                <h2>Spyworn Blue Formal Fit cotton shirt Apple cut</h2>
+                <h4 class="d-flex">Spyworn Suits
+                    <span class="end icon">
+                        <ion-icon class="material-icons">favorite_border</ion-icon>
+                        <ion-icon class="material-icons">share</ion-icon>
+                    </span>
+                </h4>
+            </ion-item>
+            <ion-item>
+                <ion-label>{{'select_size' | translate}}</ion-label>
+                <ion-select [(ngModel)]="select_size">
+                    <ion-option value="m">M</ion-option>
+                    <ion-option value="l">L</ion-option>
+                    <ion-option value="XL">XL</ion-option>
+                    <ion-option value="XXL">XXL</ion-option>
+                </ion-select>
+                <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-label>{{'select_color' | translate}}</ion-label>
+                <ion-select [(ngModel)]="select_color">
+                    <ion-option value="light_blue">Light Blue</ion-option>
+                    <ion-option value="dark_blue">Dark Blue</ion-option>
+                    <ion-option value="white">White</ion-option>
+                    <ion-option value="black">Black</ion-option>
+                </ion-select>
+                <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+            </ion-item>
+            <ion-item>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                </p>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+<ion-footer no-border class="d-flex">
+    <h2>$9.90</h2>
+    <button ion-button block class="btn end">{{'add_to_cart' | translate}}</button>
+</ion-footer>

@@ -1,0 +1,278 @@
+page-book_ticket {
+    .header {
+        .toolbar {
+            .title .toolbar-title {
+                font-size: 1.55rem !important;
+                color: $white !important;
+            }
+
+            .back-button .button-inner .back-button-icon {
+                color: $white !important;
+
+            }
+        }
+
+        .segment {
+            border: none !important;
+            background: none;
+            position: relative;
+            align-items: center;
+            top: -2px;
+
+            .segment-button {
+                border: none;
+                height: auto;
+                text-transform: none;
+                opacity: 1;
+                position: relative;
+                color: darken($white, 0%);
+                font-size: 1.6rem;
+                font-weight: 400;
+                padding-bottom: 7px;
+                overflow: hidden;
+
+                img {
+                    width: 37px;
+                    display: block;
+                    position: relative;
+                    display: inline;
+                    position: relative;
+                    top: 13px;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    display: inline;
+                    margin: 0;
+                }
+
+                &.segment-activated {
+                    opacity: 1;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 33px;
+                        height: 5px;
+                        border-radius: 50px;
+                        background: $white;
+                        margin: 0 auto;
+                    }
+                }
+
+            }
+        }
+
+        &.header_bg::after {
+            height: 114px;
+        }
+    }
+
+    .tab_container {
+        width: calc(100% - 47px);
+        margin: 0 auto;
+
+        .form {
+            .list {
+                .item {
+                    border-top: none !important;
+                    border-bottom: 1px solid lighten($gray, 30%) !important;
+                    padding: 0;
+                    margin: 30px 0;
+
+                    ion-icon {
+                        &[item-start] {
+                            margin: 0;
+                            color: lighten($gray, 10%);
+                            font-size: 2.3rem;
+                            position: relative;
+                            top: 3px;
+                            margin-right: 7px;
+
+                        }
+                    }
+
+                    .item-inner {
+                        .label {
+                            h2 {
+                                color: $theme-color;
+                                font-size: 1.7rem;
+                            }
+                        }
+
+                        ion-input {
+                            font-size: 1.7rem;
+                            font-weight: 500;
+                            margin-top: 0px;
+                            color: darken($theme-color, 100%);
+
+                            .text-input {
+                                margin: 0;
+                                letter-spacing: .5px;
+                            }
+
+                            ::-webkit-input-placeholder {
+                                font-size: 1.65rem;
+                                font-weight: 400;
+                                color: lighten($gray, 10%);
+                            }
+
+                            ::-moz-placeholder {
+                                font-size: 1.65rem;
+                                font-weight: 400;
+                                color: lighten($gray, 10%);
+                            }
+
+                            :-ms-input-placeholder {
+                                font-size: 1.65rem;
+                                font-weight: 400;
+                                color: lighten($gray, 10%);
+                            }
+
+                            :-moz-placeholder {
+                                font-size: 1.65rem;
+                                font-weight: 400;
+                                color: lighten($gray, 10%);
+                            }
+                        }
+
+                        h4 {
+                            &[item-end] {
+                                margin: 0;
+                                font-size: 1.27rem;
+                                color: lighten($gray, 10%);
+                                position: relative;
+                                font-weight: 500;
+
+                                span {
+                                    &.active {
+                                        color: $theme-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.item-select {
+
+                        .label {
+                            font-size: 1.65rem;
+                            font-weight: 400;
+                            color: lighten($gray, 10%);
+                        }
+
+                        .select {
+                            padding: 0;
+                            max-width: unset;
+
+                            .select-icon {
+                                display: none;
+                            }
+
+                            .select-text {
+                                font-size: 1.8rem;
+                                color: darken($gray, 100%);
+                                font-weight: 500;
+                                padding: 0 10px;
+                            }
+                        }
+
+                        ion-icon {
+                            &[item-end] {
+                                margin: 0;
+                                color: lighten($gray, 6%);
+                            }
+                        }
+                    }
+
+                    &.item-toggle {
+                        border: none !important;
+                        margin: 0 auto;
+                        margin-bottom: 16px;
+                        width: 291px;
+                        margin-top: 10px;
+
+                        p {
+                            margin: 0 !important;
+                            font-size: 1.55rem;
+                            font-weight: 500;
+                            width: 100px;
+                            color: darken($white, 100%);
+
+                        }
+
+                        .input-wrapper {
+                            display: none;
+                        }
+
+                        ion-toggle {
+                            margin: 0 10px;
+
+                            .toggle-icon {
+                                background: lighten($gray, 10%) !important;
+
+                                .toggle-inner {
+                                    background: $theme-gradient !important;
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .row {
+                &.type_of_sheet {
+                    margin: 0;
+                    margin-top: 10px;
+
+                    .col {
+                        .sheets {
+                            .img_box {
+                                width: 50px;
+                                height: 50px;
+                                border: 1px solid lighten($gray, 30%);
+                                border-radius: 5px;
+                                padding: 6px;
+                                margin: 0 auto;
+                                margin-bottom: 10px;
+                            }
+
+                            p {
+                                margin: 0;
+                                font-size: 1.35rem;
+                                color: lighten($gray, 6%);
+                            }
+
+                        }
+
+                        &.active {
+                            .sheets .img_box {
+                                background: lighten($theme-color, 45%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .row {
+                .col {
+                    .item {
+                        margin-top: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: calc(100% - 36px);
+        right: 0;
+        margin: auto;
+        padding-bottom: 14px;
+    }
+}

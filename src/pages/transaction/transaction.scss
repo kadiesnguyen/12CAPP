@@ -1,0 +1,123 @@
+page-transaction {
+    .header {
+        .toolbar {
+            .title .toolbar-title {
+                font-size: 1.55rem !important;
+            }
+        }
+
+        .banner {
+            width: calc(100% - 30px);
+            margin: 0 auto;
+            padding-bottom: 17px;
+            padding-top: 37px;
+
+            h2 {
+                font-size: 1.5rem;
+                margin: 0;
+                margin-bottom: 10px;
+
+            }
+
+            h3 {
+                font-size: 4rem;
+                margin: 0;
+                margin-bottom: 30px;
+            }
+
+            .row {
+                margin: 0 -5px;
+
+                .col {
+                    .button.btn[block] {
+                        margin: 0;
+                        font-size: 1.5rem;
+                        height: 50px;
+
+                        &[clear] {
+                            background: none !important;
+                            border: 1px solid $theme-color;
+                            color: $theme-color !important;
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .list {
+        margin: 0;
+        margin-top: 7px;
+
+        h3 {
+            font-size: 1.25rem;
+            padding: 12px 30px 12px 30px;
+            margin: 0;
+
+        }
+
+        .item {
+            padding: 16px 20px 16px 20px;
+            margin: 0 auto;
+            margin-bottom: 7px;
+            border-radius: 8.5px;
+            width: calc(100% - 14px);
+            box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.2);
+
+            .img_box {
+                position: relative;
+                overflow: hidden;
+                min-width: 37px;
+                width: 37px;
+                height: 37px;
+                border-radius: 50%;
+                margin: 0 !important;
+                margin-right: 14px !important;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: -50% !important;
+                    right: -50% !important;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+
+            }
+
+            .item-inner {
+                padding: 0;
+
+                .label {
+                    margin: 0;
+                    white-space: normal;
+
+                    h2 {
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        padding-bottom: 2px;
+
+                        ion-icon {
+                            font-size: 1.4rem;
+                            color: $green_color;
+                            display: none;
+                            position: relative;
+                            top: -5px;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.1rem;
+                        color: lighten($gray, 10%);
+                        letter-spacing: .5px;
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+page-my_orders {
+    .header {
+        .toolbar {
+            .title .toolbar-title {
+                color: $white !important;
+
+                .icon_box {
+                    margin: 0 -10px;
+
+                    ion-icon {
+                        position: relative;
+                        padding: 0 10px;
+                        padding-top: 5px;
+
+                        img {
+                            margin: 0;
+                            width: 20px;
+
+                        }
+
+                        .badge {
+                            position: absolute;
+                            top: 0px;
+                            right: 5px;
+                            padding: 2px 4px 2px 4px;
+                            border-radius: 50%;
+                            font-weight: 300;
+                            font-size: 1rem;
+                            background: $red_color;
+
+                        }
+                    }
+                }
+            }
+
+            .back-button .button-inner .back-button-icon {
+                color: $white !important;
+
+            }
+        }
+
+        ion-scroll {
+            height: 43px;
+            white-space: nowrap;
+            margin-top: 16px;
+
+            .segment {
+                justify-content: unset !important;
+                display: block !important;
+                border: none !important;
+                background: none;
+
+                .segment-button {
+                    display: inline-block;
+                    border: none;
+                    height: auto;
+                    text-transform: none;
+                    opacity: .5;
+                    position: relative;
+                    color: darken($white, 0%);
+                    width: auto;
+                    font-size: 1.6rem;
+                    padding-bottom: 2px;
+                    font-weight: 400;
+                    margin: 0 15px;
+
+                    &.segment-activated {
+                        opacity: 1;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            width: 33px;
+                            height: 5px;
+                            border-radius: 50px;
+                            background: $white;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-left: 28px;
+                    }
+
+                    &:last-child {
+                        margin-right: 28px;
+                    }
+                }
+            }
+        }
+
+        &.header_bg::after {
+            height: 114px;
+        }
+    }
+
+    .list {
+        margin: 0;
+        margin-top: 10px;
+
+        .item {
+            padding: 15px 18px 15px 18px;
+            margin: 0 auto;
+            margin-bottom: 9px;
+            border-radius: 8.5px;
+            width: calc(100% - 14px);
+            box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.2);
+
+            .item-inner {
+                padding: 0;
+
+                .label {
+                    margin: 0;
+                    white-space: normal;
+
+                    .order_details {
+                        margin-top: 20px;
+
+                        .order_img {
+                            position: relative;
+                            overflow: hidden;
+                            min-width: 47px;
+                            width: 47px;
+                            height: 47px;
+                            border-radius: 50%;
+                            margin: 0 !important;
+                            margin-right: 17px !important;
+
+                            img {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: -50% !important;
+                                right: -50% !important;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto;
+                            }
+
+                        }
+                    }
+
+                    h2 {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        padding-bottom: 2px;
+                        color: $theme-color;
+
+                        span {
+                            color: darken($theme-color, 100%);
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        padding-bottom: 2px;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        color: lighten($gray, 10%);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

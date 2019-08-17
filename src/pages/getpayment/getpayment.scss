@@ -1,0 +1,67 @@
+page-getpayment {
+    .header .toolbar {
+        .title {
+            img {
+                width: 93px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                z-index: -1;
+            }
+        }
+    }
+
+
+    .qr_code_box {
+        position: absolute;
+        width: 100%;
+        height: 390px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        right: 0;
+
+        h2 {
+            font-size: 1.5rem;
+            font-size: 1.5rem;
+            margin: 0;
+            margin-bottom: 13px;
+        }
+
+        .qr_code {
+            position: relative;
+            width: 250px;
+            margin: 0 auto;
+            height: 250px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.9rem;
+            font-weight: 500;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-top: 10px;
+            color: darken($gray, 40%);
+        }
+    }
+
+    .footer {
+        .button.btn[clear] {
+            width: calc(100% - 45px);
+            margin: 0 auto;
+            background: none;
+            border: 1px solid $theme-color;
+            color: $theme-color;
+            margin-bottom: 16px;
+        }
+    }
+}

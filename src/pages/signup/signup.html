@@ -1,0 +1,83 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title><span text-uppercase class="center">{{'sign_up' | translate}}</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="banner center_img">
+        <ion-slides pager autoplay=3000>
+            <ion-slide>
+                <div class="img_box center_img">
+                    <img src="assets/imgs/banner1.png" class="crop_img">
+                </div>
+                <div class="text">
+                    <h2>Đăng ký ngay</h2>
+                    <p>Đăng ký để nạp tiền chiết khấu cao</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="img_box center_img">
+                    <img src="assets/imgs/banner2.png" class="crop_img">
+                </div>
+                <div class="text">
+                    <h2>Đăng ký ngay</h2>
+                    <p>Đăng ký để nạp tiền chiết khấu cao</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="img_box center_img">
+                    <img src="assets/imgs/banner1.png" class="crop_img">
+                </div>
+                <div class="text">
+                    <h2>Đăng ký ngay</h2>
+                    <p>Đăng ký để nạp tiền chiết khấu cao</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="img_box center_img">
+                    <img src="assets/imgs/banner2.png" class="crop_img">
+                </div>
+                <div class="text">
+                    <h2>Đăng ký ngay</h2>
+                    <p>Đăng ký để nạp tiền chiết khấu cao</p>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <div class="form">
+        <ion-list no-lines>
+            <ion-item>
+                <div class="icon_box" item-start>
+                    <img src="assets/imgs/ic_person.png">
+                </div>
+                <ion-input type="text" placeholder="{{'full_name' | translate}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <div class="icon_box" item-start>
+                    <img src="assets/imgs/ic_email.png">
+                </div>
+                <ion-input type="email" placeholder="{{'email_address' | translate}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <div class="icon_box" item-start>
+                    <img src="assets/imgs/ic_phone.png">
+                </div>
+                <ion-input type="number" placeholder="{{'phone_number' | translate}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <div class="icon_box" item-start>
+                    <img src="assets/imgs/ic_password.png">
+                </div>
+                <ion-input type="password" placeholder="{{'create_password' | translate}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <div class="icon_box" item-start>
+                    <img src="assets/imgs/ic_password.png">
+                </div>
+                <ion-input type="password" placeholder="{{'confirm_password' | translate}}"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button text-uppercase ion-button block class="btn" (click)="verification()"> {{'sign_up' | translate}}</button>
+    </div>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'add_money' | translate}}</ion-title>
+    </ion-navbar>
+
+    <div class="form">
+        <ion-list no-lines>
+            <ion-item>
+                <ion-input type="text" placeholder="{{'enter_amount' | translate}}"></ion-input>
+                <h3 item-end (click)="promocode()">{{'have_promocode' | translate}}</h3>
+            </ion-item>
+            <button ion-button block class="btn"> {{'add_money' | translate}}</button>
+            <h2 text-center>{{'quick_pay_balance' | translate}} $ 3.85</h2>
+        </ion-list>
+    </div>
+</ion-header>
+
+<ion-content class="bg-color">
+    <ion-card>
+        <div class="card_bg center_img">
+            <img src="assets/imgs/card_bg2.png" class="crop_img">
+        </div>
+        <h2>{{'deals_of_the_day' | translate}}</h2>
+        <ion-scroll scrollY="true">
+            <ion-list no-lines>
+                <ion-item>
+                    <h3>Upto 80% Cashback every hour</h3>
+                    <div class="text d-flex">
+                        <p>Get upto 80% Cashback on any bill payment every hour.</p>
+                        <h4 text-center class="end">{{'know_more' | translate}}</h4>
+                    </div>
+                    <h6><sup>*</sup>{{'t_c_apply' | translate}}</h6>
+                </ion-item>
+                <ion-item>
+                    <h3>Upto 80% Cashback every hour</h3>
+                    <div class="text d-flex">
+                        <p>Get upto 80% Cashback on any bill payment every hour.</p>
+                        <h4 text-center class="end">{{'know_more' | translate}}</h4>
+                    </div>
+                    <h6><sup>*</sup>{{'t_c_apply' | translate}}</h6>
+                </ion-item>
+                <ion-item>
+                    <h3>Upto 80% Cashback every hour</h3>
+                    <div class="text d-flex">
+                        <p>Get upto 80% Cashback on any bill payment every hour.</p>
+                        <h4 text-center class="end">{{'know_more' | translate}}</h4>
+                    </div>
+                    <h6><sup>*</sup>{{'t_c_apply' | translate}}</h6>
+                </ion-item>
+                <ion-item>
+                    <h3>Upto 80% Cashback every hour</h3>
+                    <div class="text d-flex">
+                        <p>Get upto 80% Cashback on any bill payment every hour.</p>
+                        <h4 text-center class="end">{{'know_more' | translate}}</h4>
+                    </div>
+                    <h6><sup>*</sup>{{'t_c_apply' | translate}}</h6>
+                </ion-item>
+            </ion-list>
+        </ion-scroll>
+    </ion-card>
+</ion-content>

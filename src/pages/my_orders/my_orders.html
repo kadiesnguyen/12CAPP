@@ -1,0 +1,140 @@
+<ion-header class="header_bg bg-transparent">
+    <ion-navbar>
+        <ion-title>{{'my_orders' | translate}}
+            <span class="icon_box end">
+                <ion-icon><img src="assets/imgs/ic_search_wt.png"></ion-icon>
+                <ion-icon><img src="assets/imgs/ic_invite.png">
+                    <ion-badge item-end>2</ion-badge>
+                </ion-icon>
+            </span>
+        </ion-title>
+    </ion-navbar>
+    <ion-scroll scrollX="true">
+        <ion-segment [(ngModel)]="order_tab">
+            <ion-segment-button value="all">
+                {{'all' | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="recharges">
+                {{'Vietel' | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="recharges">
+                {{'Mobiphone' | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="recharges">
+                {{'Truyền hình' | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="recharges">
+                {{'Vinagame' | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="recharges">
+                {{'VTC Game' | translate}}
+            </ion-segment-button>
+            <ion-segment-button value="recharges">
+                {{'K Plus' | translate}}
+            </ion-segment-button>
+        </ion-segment>
+    </ion-scroll>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="tab_container" [ngSwitch]="order_tab">
+        <ion-list no-lines *ngSwitchCase="'all'">
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Mobi <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 04:45 am</p>
+
+            </ion-item>
+
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 04:45 am</p>
+
+            </ion-item>
+
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} 998745 <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+        </ion-list>
+
+        <ion-list no-lines *ngSwitchCase="'recharges'">
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+        </ion-list>
+
+        <ion-list no-lines *ngSwitchCase="'trickets'">
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+        </ion-list>
+
+        <ion-list no-lines *ngSwitchCase="'bill'">
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+            </ion-item>
+        </ion-list>
+        <ion-list no-lines *ngSwitchCase="'shopping'">
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 04:45 am</p>
+
+
+
+            </ion-item>
+        </ion-list>
+
+        <ion-list no-lines *ngSwitchCase="'travel'">
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 03:14 am</p>
+
+
+            </ion-item>
+        </ion-list>
+
+        <ion-list no-lines *ngSwitchCase="'deals'">
+            <ion-item>
+                <h2 class="d-flex">{{'order_num' | translate}} Vietel trả truớc <span class="end">10.000đ</span></h2>
+                <p>2, tháng 8, 2019, 04:45 am</p>
+
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

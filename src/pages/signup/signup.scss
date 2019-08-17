@@ -1,0 +1,165 @@
+page-signup {
+    .header .toolbar {
+        .title .toolbar-title {
+            font-weight: 500 !important;
+            color: $white;
+            font-size: 1.5rem !important;
+
+            span {
+
+                &.center {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    text-align: center;
+                    letter-spacing: 3px;
+                    z-index: -1;
+                }
+            }
+        }
+
+        .back-button .button-inner .back-button-icon {
+            color: $white !important;
+        }
+    }
+
+    .scroll-content {
+        margin-top: 0 !important;
+    }
+
+    .banner {
+        width: 100%;
+        height: 272px;
+
+        ion-slide {
+            .slide-zoom {
+                .img_box {
+                    width: 100%;
+                    height: 290px;
+                }
+
+                .text {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    height: auto;
+                    bottom: 80px;
+                    color: $white;
+                    text-align: unset;
+                    text-align: initial;
+                    padding: 0 24px;
+
+                    h2 {
+                        margin: 0;
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        letter-spacing: .5px;
+                        padding-bottom: 7px;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination-fraction,
+        .swiper-pagination-custom,
+        .swiper-container-horizontal > .swiper-pagination-bullets {
+            bottom: 5px !important;
+
+            .swiper-pagination-bullet {
+                opacity: 1;
+                width: 6px;
+                height: 6px;
+                margin: 0 3px;
+                background: rgba(161, 161, 161, 0.75);
+
+                &.swiper-pagination-bullet-active {
+                    background: $theme-color;
+                }
+            }
+        }
+
+    }
+
+    .button.btn[block] {
+        letter-spacing: 1.5px;
+        margin: 7px auto;
+        width: calc(100% - 15px);
+        height: 60px;
+        border-radius: 7px;
+        font-size: 1.6rem;
+    }
+
+    .form {
+        .list {
+            box-shadow: 0 -12px 10px 10px rgba(0, 0, 0, 0.2);
+
+            .item {
+                .item-inner {
+                    ion-input {
+                        font-size: 1.7rem;
+                        font-weight: 500;
+                        margin-top: 0px;
+                        color: darken($theme-color, 100%);
+
+                        .text-input {
+                            margin: 0;
+                            letter-spacing: .5px;
+                        }
+
+                        ::-webkit-input-placeholder {
+                            font-size: 1.6rem;
+                            color: lighten($gray, 10%);
+                            letter-spacing: 1px;
+                        }
+
+                        ::-moz-placeholder {
+                            font-size: 1.6rem;
+                            color: lighten($gray, 10%);
+                            letter-spacing: 1px;
+                        }
+
+                        :-ms-input-placeholder {
+                            font-size: 1.6rem;
+                            color: lighten($gray, 10%);
+                            letter-spacing: 1px;
+                        }
+
+                        :-moz-placeholder {
+                            font-size: 1.6rem;
+                            color: lighten($gray, 10%);
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .footer {
+        p {
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding-bottom: 16px;
+        }
+
+        .button.btn[block] {
+            background: $white !important;
+            border: 1px solid lighten($theme-color, 20%);
+
+            .button-inner {
+                background: $theme-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 700;
+            }
+
+        }
+
+    }
+}

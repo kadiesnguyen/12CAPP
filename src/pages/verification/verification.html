@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="form">
+        <h2>{{'phone_verification' | translate}}</h2>
+        <p>{{'verification_text_1' | translate}}<br>{{'verification_text_2' | translate}}</p>
+        <ion-list no-lines>
+            <ion-item>
+                <ion-input type="text" placeholder="{{'enter_code_here' | translate}}"></ion-input>
+            </ion-item>
+            <button ion-button block class="btn" (click)="tabs()"> {{'submit' | translate}}</button>
+            <h3 text-center>{{'code_resend' | translate}}</h3>
+        </ion-list>
+    </div>
+</ion-content>

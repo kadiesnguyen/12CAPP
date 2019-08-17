@@ -1,0 +1,242 @@
+<ion-header class="header_bg bg-transparent">
+    <ion-navbar>
+        <ion-title>{{'book_a_ticket' | translate}}
+        </ion-title>
+    </ion-navbar>
+    <ion-segment [(ngModel)]="book_ticket">
+        <ion-segment-button value="train_ticket">
+            <img src="assets/imgs/ic_train.png">
+            <p>{{'train_ticket' | translate}} </p>
+        </ion-segment-button>
+        <ion-segment-button value="flights">
+            <img src="assets/imgs/ic_flights.png">
+            <p>{{'flights' | translate}} </p>
+        </ion-segment-button>
+        <ion-segment-button value="bus">
+            <img src="assets/imgs/ic_bus.png">
+            <p>{{'bus' | translate}} </p>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content>
+    <div class="tab_container" [ngSwitch]="book_ticket">
+        <div class="form" *ngSwitchCase="'train_ticket'">
+            <ion-list no-lines>
+                <ion-item>
+                    <ion-label>{{'from' | translate}}</ion-label>
+                    <ion-select [(ngModel)]="from">
+                        <ion-option value="brookly">Brooklyn</ion-option>
+                        <ion-option value="smithtowm">Smithtowm</ion-option>
+                    </ion-select>
+                    <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>{{'to' | translate}}</ion-label>
+                    <ion-select [(ngModel)]="to">
+                        <ion-option value="brookly">Brooklyn</ion-option>
+                        <ion-option value="smithtowm">Smithtowm</ion-option>
+                    </ion-select>
+                    <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+                </ion-item>
+
+                <ion-item>
+                    <ion-icon class="material-icons" item-start>today</ion-icon>
+                    <ion-input type="text" placeholder="{{'depart_date' | translate}}"></ion-input>
+                    <h4 item-end><span class="active"> {{'today' | translate}}</span> | <span>{{'tommarrow' | translate}}</span></h4>
+                </ion-item>
+            </ion-list>
+
+            <ion-row class="type_of_sheet">
+                <ion-col col-3>
+                    <div class="sheets" text-center>
+                        <div class="img_box">
+                            <img src="assets/imgs/ac.png">
+                        </div>
+                        <p>AC</p>
+                    </div>
+                </ion-col>
+                <ion-col col-3>
+                    <div class="sheets" text-center>
+                        <div class="img_box">
+                            <img src="assets/imgs/non-sc.png">
+                        </div>
+                        <p>Non AC</p>
+                    </div>
+                </ion-col>
+                <ion-col col-3>
+                    <div class="sheets" text-center>
+                        <div class="img_box">
+                            <img src="assets/imgs/seater.png">
+                        </div>
+                        <p>Seater</p>
+                    </div>
+                </ion-col>
+                <ion-col col-3 class="active">
+                    <div class="sheets" text-center>
+                        <div class="img_box">
+                            <img src="assets/imgs/sleeper.png">
+                        </div>
+                        <p>Sleeper</p>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="form" *ngSwitchCase="'flights'">
+            <ion-list no-lines>
+                <ion-item>
+                    <p item-start text-end>{{'one_way' | translate}}</p>
+                    <ion-toggle checked="false"></ion-toggle>
+                    <p item-end text-start>{{'round_trip' | translate}}</p>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>{{'from' | translate}}</ion-label>
+                    <ion-select [(ngModel)]="flights_from">
+                        <ion-option value="new_york">New York (JFK)</ion-option>
+                        <ion-option value="toronto">Toronto (YTZ)</ion-option>
+                    </ion-select>
+                    <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>{{'to' | translate}}</ion-label>
+                    <ion-select [(ngModel)]="flights_to">
+                        <ion-option value="new_york">New York (JFK)</ion-option>
+                        <ion-option value="toronto">Toronto (YTZ)</ion-option>
+                    </ion-select>
+                    <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+                </ion-item>
+
+                <ion-row>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-icon class="material-icons" item-start>today</ion-icon>
+                            <ion-input type="text" placeholder="{{'depart_date' | translate}}"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-icon class="material-icons" item-start>today</ion-icon>
+                            <ion-input type="text" placeholder="{{'return_date' | translate}}"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-4>
+                        <ion-item>
+                            <ion-input type="text" placeholder="{{'abult' | translate}}"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-4>
+                        <ion-item>
+                            <ion-input type="text" placeholder="{{'child' | translate}}"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-4>
+                        <ion-item>
+                            <ion-input type="text" placeholder="{{'infant' | translate}}"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-item style="margin-top: 0;">
+                    <ion-label>{{'class' | translate}}</ion-label>
+                    <ion-select [(ngModel)]="claas">
+                        <ion-option value="business">Business</ion-option>
+                        <ion-option value="economy">Economy</ion-option>
+                    </ion-select>
+                    <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+                </ion-item>
+            </ion-list>
+        </div>
+
+        <div class="form" *ngSwitchCase="'bus'">
+            <ion-list no-lines>
+                <ion-item>
+                    <ion-label>{{'from' | translate}}</ion-label>
+                    <ion-select [(ngModel)]="from">
+                        <ion-option value="brookly">Brooklyn</ion-option>
+                        <ion-option value="smithtowm">Smithtowm</ion-option>
+                    </ion-select>
+                    <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>{{'to' | translate}}</ion-label>
+                    <ion-select [(ngModel)]="to">
+                        <ion-option value="brookly">Brooklyn</ion-option>
+                        <ion-option value="smithtowm">Smithtowm</ion-option>
+                    </ion-select>
+                    <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
+                </ion-item>
+
+                <ion-item>
+                    <ion-icon class="material-icons" item-start>today</ion-icon>
+                    <ion-input type="text" placeholder="{{'depart_date' | translate}}"></ion-input>
+                    <h4 item-end><span class="active"> {{'today' | translate}}</span> | <span>{{'tommarrow' | translate}}</span></h4>
+                </ion-item>
+
+                <ion-row>
+                    <ion-col col-4>
+                        <ion-item>
+                            <ion-input type="text" placeholder="{{'abult' | translate}}"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-4>
+                        <ion-item>
+                            <ion-input type="text" placeholder="{{'child' | translate}}"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-4>
+                        <ion-item>
+                            <ion-input type="text" placeholder="{{'infant' | translate}}"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-list>
+
+            <ion-row class="type_of_sheet">
+                <ion-col col-3>
+                    <div class="sheets" text-center>
+                        <div class="img_box">
+                            <img src="assets/imgs/ac.png">
+                        </div>
+                        <p>AC</p>
+                    </div>
+                </ion-col>
+                <ion-col col-3>
+                    <div class="sheets" text-center>
+                        <div class="img_box">
+                            <img src="assets/imgs/non-sc.png">
+                        </div>
+                        <p>Non AC</p>
+                    </div>
+                </ion-col>
+                <ion-col col-3>
+                    <div class="sheets" text-center>
+                        <div class="img_box">
+                            <img src="assets/imgs/seater.png">
+                        </div>
+                        <p>Seater</p>
+                    </div>
+                </ion-col>
+                <ion-col col-3 class="active">
+                    <div class="sheets" text-center>
+                        <div class="img_box">
+                            <img src="assets/imgs/sleeper.png">
+                        </div>
+                        <p>Sleeper</p>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>
+<ion-footer no-border>
+    <button ion-button block class="btn" *ngIf="book_ticket == 'train_ticket'" (click)="paymentsuccessful()"> {{'search_trains' | translate}}</button>
+    <button ion-button block class="btn" *ngIf="book_ticket == 'flights'"> {{'search_flights' | translate}}</button>
+    <button ion-button block class="btn" *ngIf="book_ticket == 'bus'"> {{'search_buses' | translate}}</button>
+</ion-footer>

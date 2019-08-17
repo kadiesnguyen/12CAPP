@@ -1,0 +1,96 @@
+page-myprofile {
+    .header {
+        .toolbar-title {
+            span {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+
+    .profile-img {
+        display: block;
+        position: relative;
+        background: $white;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 10px;
+        padding-bottom: 30px;
+
+        .img-box {
+            background: lighten($gray, 30%);
+            width: 105px;
+            height: 105px;
+            margin: 0 auto;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            margin-top: 45px;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: -50% !important;
+                right: -50% !important;
+                width: 100%;
+                max-width: unset;
+                height: 100%;
+                margin: auto;
+            }
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            padding-top: 16px;
+            color: $gray;
+            font-weight: 400;
+            letter-spacing: .5px;
+        }
+    }
+
+    .form {
+        .list {
+            margin-bottom: 0;
+            padding: 30px 30px 26px 30px;
+
+            .row {
+                margin: 0 -10px;
+
+                .col {
+                    padding: 0px 10px;
+                }
+            }
+
+            ion-item {
+                padding: 0;
+                border-top: none !important;
+                border-bottom: 1px solid #efefef !important;
+                margin-bottom: 30px;
+
+                .item-inner {
+                    .label {
+                        font-size: 1.5rem;
+                    }
+
+                    ion-input {
+                        font-size: 1.5rem;
+                    }
+
+                    img {
+                        &[item-end] {
+                            margin: 0;
+                            width: 18px;
+                            position: relative;
+                            top: 5px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+    }
+
+}

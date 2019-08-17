@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Tìm kiếm</ion-title>
+    </ion-navbar>
+
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="{{'search_placeholder' | translate}}"></ion-searchbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+    <div class="quick_links">
+        <h3>{{'quick_links' | translate}}</h3>
+        <ion-scroll scrollX="true">
+            <div class="links" (click)="phonerecharge()">
+                <img src="assets/imgs/ic_recharge.png">
+                <h6>{{'Viettel trả truớc' | translate}}</h6>
+            </div>
+            <div class="links">
+                <img src="assets/imgs/ic_electricity.png">
+                <h6>{{'Vina trả truớc' | translate}}</h6>
+            </div>
+            <div class="links" (click)="phonerecharge()">
+                <img src="assets/imgs/ic_train.png">
+                <h6>{{'Vietel trả sau' | translate}}</h6>
+            </div>
+            <div class="links" (click)="phonerecharge()">
+                <img src="assets/imgs/ic_flights.png">
+                <h6>{{'Cuợc truyền hình FTTH' | translate}}</h6>
+            </div>
+            <div class="links" (click)="phonerecharge()">
+                <img src="assets/imgs/ic_bus.png">
+                <h6>{{'Mobi trả truớc' | translate}}</h6>
+            </div>
+            <div class="links"  (click)="phonerecharge()">
+                <img src="assets/imgs/ic_dth.png">
+                <h6>{{'Garena' | translate}}</h6>
+            </div>
+            <div class="links"  (click)="phonerecharge()">
+                <img src="assets/imgs/ic_broadband.png">
+                <h6>{{'VTC Game' | translate}}</h6>
+            </div>
+            <div class="links"  (click)="phonerecharge()">
+                <img src="assets/imgs/ic_more.png">
+                <h6>{{'K Plus' | translate}}</h6>
+            </div>
+        </ion-scroll>
+    </div>
+    <ion-list no-lines>
+        <ion-card>
+            <div class="card_bg center_img">
+                <img src="assets/imgs/card_bg2.png" class="crop_img">
+            </div>
+            <h2>{{'save_on_bill_payments' | translate}}</h2>
+            <ion-scroll scrollX="true">
+                <ion-item>
+                    <h3>Thông tin giảm giá</h3>
+                    <div class="text d-flex">
+                        <p>Giảm gía nạp thẻ.</p>
+                        <h4 text-center class="end">{{'know_more' | translate}}</h4>
+                    </div>
+                    <h6><sup>*</sup>{{'t_c_apply' | translate}}</h6>
+                </ion-item>
+                <ion-item>
+                    <h3>Thông tin giảm giá</h3>
+                    <div class="text d-flex">
+                        <p>Giảm gía nạp thẻ.</p>
+                        <h4 text-center class="end">{{'know_more' | translate}}</h4>
+                    </div>
+                    <h6><sup>*</sup>{{'t_c_apply' | translate}}</h6>
+                </ion-item>
+                <ion-item>
+                    <h3>Thông tin giảm giá</h3>
+                    <div class="text d-flex">
+                        <p>Giảm gía nạp thẻ.</p>
+                        <h4 text-center class="end">{{'know_more' | translate}}</h4>
+                    </div>
+                    <h6><sup>*</sup>{{'t_c_apply' | translate}}</h6>
+                </ion-item>
+                <ion-item>
+                    <h3>Thông tin giảm giá</h3>
+                    <div class="text d-flex">
+                        <p>Giảm gía nạp thẻ.</p>
+                        <h4 text-center class="end">{{'know_more' | translate}}</h4>
+                    </div>
+                    <h6><sup>*</sup>{{'t_c_apply' | translate}}</h6>
+                </ion-item>
+            </ion-scroll>
+        </ion-card>
+    </ion-list>
+</ion-content>

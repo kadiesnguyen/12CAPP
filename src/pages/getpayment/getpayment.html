@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <img src="assets/imgs/logo2.png">
+            <ion-icon class="material-icons end">share</ion-icon>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+
+    <div class="qr_code_box">
+        <h2>{{'scan_this_code_to_quickpay' | translate}}</h2>
+        <div class="qr_code">
+            <img src="assets/imgs/img_qrcode.png">
+        </div>
+        <h3 text-uppercase>Samantha smith</h3>
+        <p>+00000000</p>
+    </div>
+</ion-content>
+<ion-footer no-border>
+    <button ion-button block clear class="btn"> {{'download_qr_code' | translate}}</button>
+</ion-footer>

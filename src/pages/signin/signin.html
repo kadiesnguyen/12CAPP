@@ -1,0 +1,37 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title><span text-uppercase class="center">{{'sign_in' | translate}}</span><span class="end" (click)="tabs()">{{'skip' | translate}}</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="banner center_img">
+        <img src="assets/imgs/banner1.png" class="crop_img">
+        <div class="logo">
+            <img src="assets/imgs/logo.png">
+        </div>
+    </div>
+    <div class="form">
+        <ion-list no-lines>
+            <ion-item>
+                <div class="icon_box" item-start>
+                    <img src="assets/imgs/ic_phone.png">
+                </div>
+                <ion-input type="text" placeholder="{{'phone_number' | translate}}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <div class="icon_box" item-start>
+                    <img src="assets/imgs/ic_password.png">
+                </div>
+                <ion-input type="password" placeholder="{{'password' | translate}}"></ion-input>
+                <h3 item-end (click)="forgotpassword()">{{'forgot' | translate}}</h3>
+            </ion-item>
+        </ion-list>
+        <button text-uppercase ion-button block class="btn" (click)="tabs()"> {{'sign_in' | translate}}</button>
+    </div>
+</ion-content>
+<ion-footer no-border>
+    <p text-center no-margin>{{'not_registered_yet' | translate}}</p>
+    <button text-uppercase ion-button block (click)="signup()">{{'Đăng ký ngay' | translate}}</button>
+</ion-footer>

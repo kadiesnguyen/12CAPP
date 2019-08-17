@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'my_profile' | translate}}<span class="end text-theme">{{'update' | translate}}</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="profile-img">
+        <div class="img-box">
+            <img src="assets/imgs/profile_pic.png">
+        </div>
+        <h3 text-center>{{'change_picture' | translate}}</h3>
+    </div>
+    <div class="form">
+        <ion-list no-lines>
+            <ion-row>
+                <ion-col col-6>
+                    <ion-item>
+                        <ion-label floating>{{'frist_name' | translate}}</ion-label>
+                        <ion-input type="text" value="Sam"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-item>
+                        <ion-label floating>{{'last_name' | translate}}</ion-label>
+                        <ion-input type="text" value="Smith"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-item>
+                <ion-label floating>{{'email_address' | translate}}</ion-label>
+                <ion-input type="email" value="samanthasmith@mail.com"></ion-input>
+                <img src="assets/imgs/ic_verified.png" item-end>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>{{'phone_number' | translate}}</ion-label>
+                <ion-input type="text" value="+1 987 654 3210"></ion-input>
+                <img src="assets/imgs/ic_verified.png" item-end>
+            </ion-item>
+
+            <ion-row>
+                <ion-col col-6>
+                    <ion-item>
+                        <ion-label floating>{{'gender' | translate}}</ion-label>
+                        <ion-input type="text" value="Male"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-item>
+                        <ion-label floating>{{'date_of_birht' | translate}}</ion-label>
+                        <ion-input type="text" value="23rd Dec, 1990"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+        </ion-list>
+    </div>
+</ion-content>

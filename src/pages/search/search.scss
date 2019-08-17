@@ -1,0 +1,220 @@
+page-search {
+    .header {
+        .searchbar {
+            background: none;
+            padding: 0;
+            border-bottom: 1px solid lighten($gray, 20%);
+            width: calc(100% - 40px);
+            margin: 0 auto;
+
+            .searchbar-input-container {
+                .searchbar-search-icon {
+                    display: none;
+                }
+
+                .searchbar-input {
+                    background: none;
+                    padding: 0;
+                    box-shadow: none;
+                    padding-bottom: 3px;
+
+                    &::-webkit-input-placeholder {
+                        color: lighten($gray, 0%);
+                        font-size: 1.9rem;
+                        font-weight: 500;
+                        letter-spacing: .9px;
+                    }
+
+                    &::-moz-placeholder {
+                        color: lighten($gray, 0%);
+                        font-size: 1.9rem;
+                        font-weight: 500;
+                        letter-spacing: .9px;
+                    }
+
+                    &:-ms-input-placeholder {
+                        color: lighten($gray, 0%);
+                        font-size: 1.9rem;
+                        font-weight: 500;
+                        letter-spacing: .9px;
+                    }
+
+                    &:-moz-placeholder {
+                        color: lighten($gray, 0%);
+                        font-size: 1.9rem;
+                        font-weight: 500;
+                        letter-spacing: .9px;
+                    }
+                }
+            }
+        }
+    }
+
+    .recente_searches {
+        background: $white;
+        padding: 24px 20px 22px 20px;
+        margin-bottom: 10px;
+
+        h3 {
+            margin: 0;
+            color: $gray;
+            font-size: 1.5rem;
+            font-weight: 400;
+
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            padding-top: 20px;
+        }
+    }
+
+    .quick_links {
+        background: $white;
+        padding: 20px 0px 20px 0px;
+        margin-bottom: 12px;
+
+        h3 {
+            margin: 0;
+            color: $gray;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 0px 20px 20px 20px;
+
+        }
+
+        ion-scroll {
+            height: 65px;
+            white-space: nowrap;
+
+            .links {
+                display: inline-block;
+                min-width: 70px;
+                text-align: center;
+
+                &:last-child {
+                    margin-right: 20px;
+                }
+
+                &:first-child {
+                    margin-left: 20px;
+                }
+
+                img {
+                    width: 35px;
+                    margin: 0 auto;
+                    display: block;
+                }
+
+                h6 {
+                    font-size: 1rem;
+                    //font-weight: 500;
+                    letter-spacing: 0;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .list {
+        margin: 0;
+
+        .card {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 0;
+            margin-top: 10px;
+            padding-bottom: 10px;
+
+            .card_bg {
+                &.center_img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            h2 {
+                position: relative;
+                z-index: 99;
+                font-weight: 500;
+                font-size: 1.4rem;
+                padding: 0;
+                padding: 18px 15px 21px 15px;
+                color: $white;
+            }
+
+            ion-scroll {
+                height: 130px;
+                white-space: nowrap;
+
+                .item {
+                    display: inline-block;
+                    width: 100%;
+                    padding-bottom: 20px;
+                    display: inline-block;
+                    width: 305px;
+                    padding-bottom: 0px;
+                    margin: 0 3px;
+                    border-radius: 8px;
+                    white-space: normal !important;
+
+                    &:first-child {
+                        margin-left: 10px;
+                    }
+
+                    &:last-child {
+                        margin-right: 10px;
+                    }
+
+                    .label {
+                        white-space: normal !important;
+
+                        h3 {
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                            padding-bottom: 6px;
+                        }
+
+                        h6 {
+                            color: lighten($gray, 5%);
+                            font-weight: 300;
+                            font-size: 1rem;
+                            letter-spacing: .5px;
+                        }
+
+                        .text {
+                            padding-bottom: 8px;
+                            padding-top: 5px;
+
+                            &.d-flex {
+                                align-items: flex-start;
+                            }
+
+                            p {
+                                font-size: 1.12rem;
+                                font-weight: 400;
+                                color: darken($gray, 100%);
+                                width: 60%;
+                            }
+
+                            h4 {
+                                background: $theme-color;
+                                color: $white;
+                                border-radius: 3px;
+                                font-weight: 500;
+                                min-width: 100px;
+                                line-height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
