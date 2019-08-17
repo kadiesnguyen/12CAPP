@@ -36,8 +36,8 @@ page-home {
                                 }
 
                                 h6 {
-                                    font-size: 1.1rem;
-                                    //font-weight: 500;
+                                    font-size: 2rem;
+                                    font-weight: 900;
                                     padding-top: 5px;
                                     letter-spacing: 0;
                                 }
@@ -87,7 +87,7 @@ page-home {
             overflow: hidden;
             border-radius: 10px;
             margin: 0;
-            margin-top: 50px;
+            margin-top: 10px;
             padding-bottom: 10px;
 
             .card_bg {
@@ -119,15 +119,16 @@ page-home {
                     .col {
                         padding-top: 10px;
                         padding-bottom: 10px;
+
                     }
                 }
 
                 img {
-                    width: 105px;
+                    width: 145px;
                     display: block;
                     margin: 0 auto;
                     margin-bottom: 6px;
-                }
+                 }
 
                 h6 {
                     margin: 0;

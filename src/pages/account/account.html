@@ -1,6 +1,7 @@
 <ion-header class="header_bg bg-transparent">
     <ion-navbar>
         <ion-title>{{'account' | translate}}</ion-title>
+
     </ion-navbar>
     <div class="profile_box d-flex" (click)="myprofile()">
         <div class="profile_img">
@@ -40,6 +41,12 @@
             </div>
             <h2>{{'terms_conditions' | translate}}</h2>
         </ion-item>
+        <ion-item (click)="signin()">
+          <div class="icon_box" item-start>
+              <img src="assets/imgs/exit.png">
+          </div>
+          <h2>{{'logout' | translate}}</h2>
+      </ion-item>
 
     </ion-list>
 </ion-content>

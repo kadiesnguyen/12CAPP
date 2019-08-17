@@ -97,9 +97,13 @@
     "amount": "Số tiền",
     "see_plans": "Chiết khấu",
     "pay_via_quickpay": "Nạp tiền",
-
+    "logout":"Đăng xuất",
     "home": "12C",
     "mall": "Khuyến mãi",
     "scan": "QR-Code",
+    "sent_money_deal":"Bắn tiền giá rẻ",
+    "sent_mobile_deal":"Nạp tiền điện thoại giá rẻ (Khuyến mãi)",
+    "sent_game":"Nạp Game",
+    "sent_k":"Nạp K Plus",
     "orders": "Lịch sử"
 }
