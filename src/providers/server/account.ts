@@ -30,4 +30,9 @@ export class Account {
         return this.token;
     }
 
+    GetSotien()
+    {
+        return this.sotien;
+    }
+
 }

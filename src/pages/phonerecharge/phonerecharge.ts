@@ -9,7 +9,7 @@ import { PromocodePage } from '../promocode/promocode';
 
 
 export class PhonerechargePage {
-
+  public result:string;
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }

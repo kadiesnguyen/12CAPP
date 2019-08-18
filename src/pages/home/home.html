@@ -12,7 +12,7 @@
       <ion-item class="icon_box">
           <ion-row text-center>
             <ion-item>
-              <h2 class="d-flex">{{'balance' | translate}} <span class="end">$ 10.00</span></h2>
+                <h2 class="d-flex">{{'balance' | translate}} <span class="end">{{balance}}</span></h2>
 
           </ion-item>
 
@@ -36,7 +36,7 @@
                       <img src="assets/imgs/ban-tien-gia-re.png">
                       <h6>{{'sent_money_deal' | translate}}</h6>
                   </ion-col>
-                  <ion-col col-6>
+                  <ion-col col-6 (click)="phonerecharge()">
                       <img src="assets/imgs/nap-dt-gia-re.png">
                       <h6>{{'sent_mobile_deal' | translate}}</h6>
                   </ion-col>
