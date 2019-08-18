@@ -26,7 +26,7 @@ export class Server {
 		})
 	}
 	postRequest(subLink:string,postData:object,callback){
-		console.log("postRequest:"+JSON.stringify(postData));
+		console.log("postRequest:"+subLink+"=>"+JSON.stringify(postData));
 		var headers = new HttpHeaders({
 			'Content-Type': 'application/json',
 			'Accept':'application/json',

@@ -37,7 +37,6 @@ import { Server } from '../providers/server/server';
 import { Account} from '../providers/server/account';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
