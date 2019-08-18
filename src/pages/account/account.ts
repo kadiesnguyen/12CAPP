@@ -39,7 +39,7 @@ export class AccountPage {
       let postData = {
            
         }
-      this.myServer.sendRequest("Login/Logout",postData,(data)=>{
+      this.myServer.postRequest("Login/Logout",null,(data)=>{
             var stt = data["stt"];
             if(stt == 1)
             {
