@@ -8,17 +8,14 @@ import {GetpaymentPage} from '../getpayment/getpayment';
 import {TransactionPage} from '../transaction/transaction';
 import {PhonerechargePage} from '../phonerecharge/phonerecharge';
 import {Book_ticketPage} from '../book_ticket/book_ticket';
-import {Account} from '../../providers/server/account';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 
 export class HomePage {
-  public balance:string;
-  constructor(public account:Account,public navCtrl: NavController) {
-      var nf = Intl.NumberFormat();
-      this.balance = nf.format(this.account.GetSotien());
+  constructor(public navCtrl: NavController) {
+
   }
    
   search(){

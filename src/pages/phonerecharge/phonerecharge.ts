@@ -6,15 +6,27 @@ import { PromocodePage } from '../promocode/promocode';
   selector: 'page-phonerecharge',
   templateUrl: 'phonerecharge.html'
 })
+
+
 export class PhonerechargePage {
 
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
-
+btnClicked(btn) {
+        if (btn == 'C') {
+            this.result = '';
+        }
+        else if (btn == '=') {
+            this.result = eval(this.result);
+        }
+        else {
+            this.result += btn;
+        }
+    }
 promocode() {
     let modal = this.modalCtrl.create(PromocodePage);
     modal.present();
-  }  
+  }
 
 }
