@@ -17,6 +17,7 @@ import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { GetpaymentPage } from '../pages/getpayment/getpayment';
 import { HelpPage } from '../pages/help/help';
 import { HomePage } from '../pages/home/home';
+import { Pay_or_sendPage } from '../pages/pay_or_send/pay_or_send';
 import { Item_infoPage } from '../pages/item_info/item_info';
 import { Item_listsPage } from '../pages/item_lists/item_lists';
 import { QrcodePage } from '../pages/mall/mall';
@@ -52,6 +53,7 @@ export function createTranslateLoader(http: HttpClient) {
     FavoritedPage,
     ForgotpasswordPage,
     GetpaymentPage,
+    Pay_or_sendPage,
     HelpPage,
     HomePage,
     Item_infoPage,
@@ -95,6 +97,7 @@ export function createTranslateLoader(http: HttpClient) {
     ForgotpasswordPage,
     GetpaymentPage,
     HelpPage,
+    Pay_or_sendPage,
     HomePage,
     Item_infoPage,
     Item_listsPage,

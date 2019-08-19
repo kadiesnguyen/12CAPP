@@ -51,7 +51,8 @@
     "notifications": "Thông báo",
     "account": "Tài khoản",
     "search_trains": "Tài khoản",
-
+    "account_box": "ID Nguời nhận",
+    "enter_id_nhan":"Nhập ID nguời nhận",
     "start_seling": "Nạp tiền",
     "view_profile": "Thông tin cá nhân",
     "favorites": "Sở thích",
@@ -62,6 +63,8 @@
     "change_picture": "Đổi ảnh",
     "frist_name": "Họ",
     "last_name": "Tên",
+    "sent_payment":"Chuyển tiền",
+    "Pay_or_sendPage":"Chuyển tiền",
     "gender": "Giới tính",
     "date_of_birht": "Ngày sinh",
     "favorited": "Sở thích",
