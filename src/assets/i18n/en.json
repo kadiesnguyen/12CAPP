@@ -22,7 +22,7 @@
     "forgot_password_text_2": "Chúng tôi đã gửi huớng dẫn lấy lại mật khẩu",
     "back": "Trở lại",
     "quick": "Chọn",
-     "pay_or_send": "Nạp nhanh Vietel - Vina",
+     "napgame": "Nạp game",
      "get_payment": "Nhận tiền",
     "transaction": "Lịch sử",
     "quick_recharges_bill_pays": "Nạp tiền điện thoại",
@@ -53,7 +53,7 @@
     "search_trains": "Tài khoản",
 
     "start_seling": "Nạp tiền",
-    "view_profile": "Chi tiết cá nhân",
+    "view_profile": "Thông tin cá nhân",
     "favorites": "Sở thích",
     "need_help": "Trợ giúp",
     "rate_us": "Bình chọn",
@@ -82,7 +82,7 @@
     "scan_this_code_to_quickpay": "Quét mã để thanh toán",
     "download_qr_code": "Tải mã QR",
     "send_to_bank": "Gửi ngân hàng",
-    "add_money": "Nạp tiền vào ví",
+    "add_money": "Bắn tiền giá rể ",
     "apply": "Chấp nhận",
     "enter_promocode": "Nhập mã giảm giá",
     "offers": "Khuyến mãi",
@@ -105,5 +105,10 @@
     "sent_mobile_deal":"Nạp tiền điện thoại giá rẻ (Khuyến mãi)",
     "sent_game":"Nạp Game",
     "sent_k":"Nạp K Plus",
+    "select_namegame":"Chọn nhà phát hành",
+    "select_time":"Chọn thời gian gia hạn",
+
+    "kplus":"Nạp K Plus",
+
     "orders": "Lịch sử"
 }

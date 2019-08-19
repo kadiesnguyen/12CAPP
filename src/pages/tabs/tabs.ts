@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
-import { QrcodePage } from '../mall/mall';
 import { My_ordersPage } from '../my_orders/my_orders';
-import { Pay_or_sendPage } from '../pay_or_send/pay_or_send';
+import { NapgamePage } from '../napgame/napgame';
 import { AccountPage } from '../account/account';
 
 @Component({
@@ -12,8 +11,7 @@ import { AccountPage } from '../account/account';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = QrcodePage;
- tab3Root =Pay_or_sendPage;
+  tab3Root =  NapgamePage;
   tab4Root =  My_ordersPage ;
   tab5Root = AccountPage;
 

@@ -10,7 +10,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AccountPage } from '../pages/account/account';
 import { AddmoneyPage } from '../pages/addmoney/addmoney';
 import { Book_ticketPage } from '../pages/book_ticket/book_ticket';
-import { CategoriesPage } from '../pages/categories/categories';
+import { KplusPage } from '../pages/kplus/kplus';
 import { ConditionPage } from '../pages/condition/condition';
 import { FavoritedPage } from '../pages/favorited/favorited';
 import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
@@ -23,7 +23,7 @@ import { QrcodePage } from '../pages/mall/mall';
 import { My_ordersPage } from '../pages/my_orders/my_orders';
 import { MyprofilePage } from '../pages/myprofile/myprofile';
 import { NotificationPage } from '../pages/notification/notification';
-import { Pay_or_sendPage } from '../pages/pay_or_send/pay_or_send';
+import { NapgamePage } from '../pages/napgame/napgame';
 import { PaymentsuccessfulPage } from '../pages/paymentsuccessful/paymentsuccessful';
 import { PhonerechargePage } from '../pages/phonerecharge/phonerecharge';
 import { PromocodePage } from '../pages/promocode/promocode';
@@ -47,7 +47,7 @@ export function createTranslateLoader(http: HttpClient) {
     AccountPage,
     AddmoneyPage,
     Book_ticketPage,
-    CategoriesPage,
+    KplusPage,
     ConditionPage,
     FavoritedPage,
     ForgotpasswordPage,
@@ -60,7 +60,7 @@ export function createTranslateLoader(http: HttpClient) {
     My_ordersPage,
     MyprofilePage,
     NotificationPage,
-    Pay_or_sendPage,
+    NapgamePage,
     PaymentsuccessfulPage,
     PhonerechargePage,
     PromocodePage,
@@ -89,7 +89,7 @@ export function createTranslateLoader(http: HttpClient) {
     AccountPage,
     AddmoneyPage,
     Book_ticketPage,
-    CategoriesPage,
+    KplusPage,
     ConditionPage,
     FavoritedPage,
     ForgotpasswordPage,
@@ -102,7 +102,7 @@ export function createTranslateLoader(http: HttpClient) {
     My_ordersPage,
     MyprofilePage,
     NotificationPage,
-    Pay_or_sendPage,
+    NapgamePage,
     PaymentsuccessfulPage,
     PhonerechargePage,
     PromocodePage,

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>{{'kplus' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="form">
+      <ion-list no-lines>
+
+          <ion-item>
+              <ion-input [(ngModel)] = "accountCanNap" type="text" placeholder="{{'Tài khoản' | translate}}"></ion-input>
+
+          </ion-item>
+          <ion-item>
+              <!--                <ion-input type="text" placeholder="{{'select_operator' | translate}}"></ion-input>-->
+              <ion-label>{{'select_time' | translate}}</ion-label>
+              <ion-select [(ngModel)]="select_operator">
+                  <ion-option value="nh_1t">
+                     1 Tháng</ion-option>
+                  <ion-option value="nh_3t">3 Tháng </ion-option>
+                  <ion-option value="nh_6t">6 Tháng</ion-option>
+                  <ion-option value="nh_1n">1 Năm</ion-option>
+                </ion-select>
+
+           </ion-item>
+
+
+      </ion-list>
+
+
+      <form id="calculator-form1">
+          <ion-item id="calculator-input1">
+              <ion-label></ion-label>
+              <ion-input type="text" placeholder="0" name="display" [(ngModel)]="sotien">0</ion-input>
+          </ion-item>
+      </form>
+
+
+
+
+
+
+             <button ion-button block class="btn" (click)="presentConfirm()"> {{'pay_via_quickpay' | translate}}</button>
+ </div>
+  <div class="banner">
+      <div class="banner_img">
+          <img src="assets/imgs/banner3.png">
+      </div>
+      <div class="banner_text" text-right>
+          <h3 text-uppercase>Nạp tièn điện thoại</h3>
+          <h2>Chiết khấu cao</h2>
+          <h4 text-uppercase>{{'shop_now' | translate}}</h4>
+      </div>
+  </div>
+</ion-content>
