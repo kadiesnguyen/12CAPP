@@ -9,18 +9,18 @@
       <ion-list no-lines>
 
           <ion-item>
-              <ion-input [(ngModel)] = "accountCanNap" type="text" placeholder="{{'Tài khoản' | translate}}"></ion-input>
+              <ion-input [(ngModel)] = "phoneNum" type="text" placeholder="{{'Tài khoản' | translate}}" ></ion-input>
 
           </ion-item>
           <ion-item>
               <!--                <ion-input type="text" placeholder="{{'select_operator' | translate}}"></ion-input>-->
-              <ion-label>{{'select_time' | translate}}</ion-label>
-              <ion-select [(ngModel)]="select_operator">
-                  <ion-option value="nh_1t">
+              <ion-label>{{'select_time' | translate}} </ion-label>
+              <ion-select [(ngModel)]="soThang" (ionChange) = "onChange($event)">
+                  <ion-option value="1">
                      1 Tháng</ion-option>
-                  <ion-option value="nh_3t">3 Tháng </ion-option>
-                  <ion-option value="nh_6t">6 Tháng</ion-option>
-                  <ion-option value="nh_1n">1 Năm</ion-option>
+                  <ion-option value="3">3 Tháng </ion-option>
+                  <ion-option value="6">6 Tháng</ion-option>
+                  <ion-option value="12">1 Năm</ion-option>
                 </ion-select>
 
            </ion-item>

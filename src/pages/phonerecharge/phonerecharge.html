@@ -15,12 +15,12 @@
             <ion-item>
                 <!--                <ion-input type="text" placeholder="{{'select_operator' | translate}}"></ion-input>-->
                 <ion-label>{{'select_operator' | translate}}</ion-label>
-                <ion-select [(ngModel)]="select_operator">
-                    <ion-option value="nh_vt">
+                <ion-select [(ngModel)]="select_operator" (ionChange) = "onChangeCardType($event)">
+                    <ion-option value="vt">
                       <img src="asset/imgs/iconviettel.png" />
-                      Vietel</ion-option>
-                    <ion-option value="nh_mb">Mobiphone </ion-option>
-                    <ion-option value="nh_vn">Vinaphone</ion-option>
+                      Vietel {{chietkhau_vt}}</ion-option>
+                    <ion-option value="mb">Mobiphone {{chietkhau_mb}}</ion-option>
+                    <ion-option value="vn">Vinaphone {{chietkhau_vn}}</ion-option>
                 </ion-select>
                 <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
             </ion-item>

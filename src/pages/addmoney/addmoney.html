@@ -15,14 +15,14 @@
           <ion-item>
               <!--                <ion-input type="text" placeholder="{{'select_operator' | translate}}"></ion-input>-->
               <ion-label>{{'select_operator' | translate}}</ion-label>
-              <ion-select [(ngModel)]="select_operator">
-                  <ion-option value="nh_vt">
-                    Vietel trả truớc</ion-option>
+              <ion-select [(ngModel)]="select_operator" (ionChange) = "onChangeCardType($event)">
+                  <ion-option value="vt">
+                    Vietel trả truớc {{chietkhau_vt}}</ion-option>
 
-                  <ion-option value="nh_vptt">Vinaphone trả truớc</ion-option>
-                  <ion-option value="nh_vtts">Vietel trả sau</ion-option>
-                  <ion-option value="nh_ftth">Cuớc truyền hình FTTH</ion-option>
-                  <ion-option value="nh_mb">Nạp Mobi </ion-option>
+                  <ion-option value="vn">Vinaphone trả truớc {{chietkhau_vn}}</ion-option>
+                  <ion-option value="vtts">Vietel trả sau {{chietkhau_vtts}}</ion-option>
+                  <ion-option value="ftth">Cuớc truyền hình FTTH {{chietkhau_ftth}}</ion-option>
+                  <ion-option value="mb">Nạp Mobi {{chietkhau_mb}}</ion-option>
 
               </ion-select>
               <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>

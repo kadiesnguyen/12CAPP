@@ -9,18 +9,18 @@
       <ion-list no-lines>
 
           <ion-item>
-              <ion-input [(ngModel)] = "accountCanNap" type="text" placeholder="{{'GARENA DK200 LQ XXXXXXXX' | translate}}"></ion-input>
+              <ion-input [(ngModel)] = "phoneNum" type="text" placeholder="{{'GARENA DK200 LQ XXXXXXXX' | translate}}" (ionChange) = "onChange($event)"></ion-input>
 
           </ion-item>
           <ion-item>
               <!--                <ion-input type="text" placeholder="{{'select_operator' | translate}}"></ion-input>-->
               <ion-label>{{'select_namegame' | translate}}</ion-label>
               <ion-select [(ngModel)]="select_operator">
-                  <ion-option value="nh_garema">
-                     Garena</ion-option>
-                  <ion-option value="nh_vtc">VTC </ion-option>
-                  <ion-option value="nh_vinagame">Vina Game</ion-option>
-                  <ion-option value="nh_gosu">Gosu</ion-option>
+                  <ion-option value="garena">
+                     Garena {{chietkhau_garena}}</ion-option>
+                  <ion-option value="vtcg">VTC {{chietkhau_garena}}</ion-option>
+                  <ion-option value="vng">Vina Game {{chietkhau_garena}}</ion-option>
+                  <ion-option value="gosu">Gosu {{chietkhau_garena}}</ion-option>
 
               </ion-select>
               <ion-icon class="material-icons" item-end>keyboard_arrow_down</ion-icon>
@@ -38,14 +38,7 @@
       </form>
 
 
-          <button   ion-button color="energized" (click)="addMoney(10000)"> 10.000 </button>
-          <button ion-button color="energized" (click)="addMoney(20000)"> 20.000 </button>
-          <button ion-button color="energized" (click)="addMoney(50000)"> 50.000 </button>
-          <button ion-button color="energized" (click)="addMoney(100000)"> 100.000 </button>
-          <button ion-button color="energized" (click)="addMoney(200000)"> 200.000 </button>
-          <button ion-button color="energized" (click)="addMoney(500000)"> 500.000 </button>
-          <button   ion-button color="energized" (click)="resetMoney()"> Xoá </button>
-
+         
 
 
              <button ion-button block class="btn" (click)="presentConfirm()"> {{'pay_via_quickpay' | translate}}</button>

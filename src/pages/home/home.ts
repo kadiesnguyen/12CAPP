@@ -10,6 +10,7 @@ import {TransactionPage} from '../transaction/transaction';
 import {PhonerechargePage} from '../phonerecharge/phonerecharge';
 import {Book_ticketPage} from '../book_ticket/book_ticket';
 import {Account} from '../../providers/server/account';
+import { Events } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -17,10 +18,16 @@ import {Account} from '../../providers/server/account';
 
 export class HomePage {
 public balance:string;
-constructor(public account:Account,public navCtrl: NavController) {
+constructor(public events: Events,public account:Account,public navCtrl: NavController) {
+      this.events.subscribe('updateScreen', () => {
+            this.updateSotien();
+          });
+      this.updateSotien();
+  }
+
+  updateSotien(){
       var nf = Intl.NumberFormat();
       this.balance = nf.format(this.account.GetSotien());
-
   }
 
   search(){

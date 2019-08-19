@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LNodeFlags } from '@angular/core/src/render3/interfaces';
+import { DebugContext } from '@angular/core/src/view';
 @Injectable()
 export class Account {
     private token:string;
@@ -33,6 +34,12 @@ export class Account {
     GetSotien()
     {
         return this.sotien;
+    }
+
+    UpdateSotien(st:number)
+    {
+        console.log("UpdateSotien:"+st);
+        this.sotien = st;
     }
 
 }
