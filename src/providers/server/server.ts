@@ -44,14 +44,24 @@ export class Server {
 		});
 	}
 	getRequest(subLink:string,postData:object,callback){
-		console.log("getRequest:"+subLink+"=>"+JSON.stringify(postData));
+		
 		var headers = new HttpHeaders({
 			'Content-Type': 'application/json',
 			'Accept':'application/json',
 			'token':this.account.GetToken()
 		});
 		var requestOptions = { headers: headers };
-		this.http.get("http://trumbantien.com:10001/api/"+subLink, requestOptions)
+		var link = "http://trumbantien.com:10001/api/"+subLink;
+		if(postData != null)
+		{
+			link+="?";
+			for(let key in postData) {
+				link = link +key+"="+postData[key]+"&";
+			}
+			link = link.substr(0,link.length);
+		}
+		console.log("getRequest:"+link+"=>"+JSON.stringify(postData));
+		this.http.get(link, requestOptions)
 		.subscribe(data => {
 			if(callback != null){
 				callback(data);
