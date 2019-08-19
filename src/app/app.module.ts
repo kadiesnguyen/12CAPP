@@ -19,7 +19,7 @@ import { HelpPage } from '../pages/help/help';
 import { HomePage } from '../pages/home/home';
 import { Item_infoPage } from '../pages/item_info/item_info';
 import { Item_listsPage } from '../pages/item_lists/item_lists';
-import { MallPage } from '../pages/mall/mall';
+import { QrcodePage } from '../pages/mall/mall';
 import { My_ordersPage } from '../pages/my_orders/my_orders';
 import { MyprofilePage } from '../pages/myprofile/myprofile';
 import { NotificationPage } from '../pages/notification/notification';
@@ -56,7 +56,7 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     Item_infoPage,
     Item_listsPage,
-    MallPage,
+    QrcodePage,
     My_ordersPage,
     MyprofilePage,
     NotificationPage,
@@ -98,7 +98,7 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     Item_infoPage,
     Item_listsPage,
-    MallPage,
+    QrcodePage,
     My_ordersPage,
     MyprofilePage,
     NotificationPage,

@@ -7,11 +7,7 @@
 <ion-content>
     <div class="form">
         <ion-list no-lines>
-            <ion-item>
-                <p item-start text-end>{{'prepaid' | translate}}</p>
-                <ion-toggle checked="false"></ion-toggle>
-                <p item-end text-start>{{'postpaid' | translate}}</p>
-            </ion-item>
+            
             <ion-item>
                 <ion-input [(ngModel)] = "accountCanNap" type="text" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
                 <ion-icon class="material-icons" item-end>account_box</ion-icon>

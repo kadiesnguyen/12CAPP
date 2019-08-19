@@ -7,7 +7,7 @@ import {CategoriesPage} from '../categories/categories';
   selector: 'page-mall',
   templateUrl: 'mall.html'
 })
-export class MallPage {
+export class QrcodePage {
 
   constructor(public navCtrl: NavController) {
 
