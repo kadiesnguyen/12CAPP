@@ -1,0 +1,89 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title><span text-uppercase style="text-align:center">BIẾN ĐỘNG SỐ DƯ CỦA <span style="color:#3184fe">{{caption}}</span></span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="fixed">Từ ngày : </ion-label>
+                    <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "tungay"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="fixed">Từ Khóa : </ion-label>
+                    <ion-input type="text" placeholder = "Chọn từ khóa..." [(ngModel)] = "keyword"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="fixed">Đến Ngày : </ion-label>
+                    <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "denngay"></ion-input>
+                </ion-item>
+            </ion-col>
+
+            <ion-col>
+                <ion-item>
+                    <ion-label position="fixed">Loại Giao Dịch : </ion-label>
+                    <ion-select [(ngModel)]="type_gd" interface="action-sheet">
+                            <ion-option value="">Tất cả {{sortAll}}</ion-option>
+                            <ion-option value="napTien">Nạp Tiền {{sort1}}</ion-option>
+                            <ion-option value="chuyenTien">Chuyển Tiền {{sort2}}</ion-option>
+                            <ion-option value="nhanTien">Nhận Tiền{{sort3}}</ion-option>
+                            <ion-option value="hoanTien">Hoàn Tiền {{sort4}}</ion-option>
+                            <ion-option value="hoaHong">Hoa Hồng {{sort5}}</ion-option>
+                            <ion-option value="chuyenTienDL">Chuyển Tiền Đại Lý{{sort6}}</ion-option>
+                            <ion-option value="muaThe">Mua Thẻ{{sort7}}</ion-option>
+                        </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        
+    </ion-grid>
+    <div class = "center">
+        <button ion-button color ="primary" block (click) = "finding()">TÌM KIẾM</button>
+        <button ion-button color="secondary" block (click) = "chuyenTien()">CHUYỂN TIỀN</button>
+        <br>
+        <br>
+</div>
+        <div>
+            <ion-card >
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                        <ion-label class="title_all" style="font-weight:bold;color:#694efe;text-align:center" >TỔNG SỐ GIAO DỊCH</ion-label>
+                        <ion-label class="title_all" style="text-align:center;font-size:30px">{{tong_so_giao_dich}}</ion-label>
+                </ion-col>
+                <ion-col>
+                        <ion-label  class="title_all" style="font-weight:bold;color:#ed3a44;text-align:center"  >TỔNG TIỀN</ion-label>
+                        <ion-label class="title_all" style="text-align:center;font-size:30px">{{tong_tien}}</ion-label>
+                </ion-col>
+                
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    </div>
+    
+    <ion-item style="background:#34db61">
+            <ion-label style="text-align:center;font-weight:bold;color:white">Ngày tạo</ion-label>
+            <ion-label style="text-align:center;font-weight:bold;color:white">Loại</ion-label>
+            <ion-label style="text-align:center;font-weight:bold;color:white">Số tiền</ion-label>
+            <ion-label style="text-align:center;font-weight:bold;color:white">Lý do</ion-label>
+    </ion-item>
+<ion-list>
+<ion-item *ngFor = "let item of items">
+    <ion-label style="text-align:center;font-weight:bold;color:#3184fe" (click)="viewDetail(item['id'])">{{item['ngay_tao']}}</ion-label>
+    <ion-label style="text-align:center">{{item['loai']}}</ion-label>
+    <ion-label style="text-align:center">{{item['sotien']}}</ion-label>
+    <ion-label style="text-align:center">{{item['lydo']}}</ion-label>
+
+</ion-item>
+</ion-list>
+</ion-content>
+

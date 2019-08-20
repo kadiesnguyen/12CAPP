@@ -7,6 +7,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import {SoduDailyPage} from '../pages/sodu_daily/sodu_daily';
 import {DetailDailyPage} from '../pages/detail_daily/detail_daily';
 import {AddDailyPage} from '../pages/add_daily/add_daily'
 import {ListDailyPage} from '../pages/list_daily/list_daily'
@@ -78,7 +79,8 @@ export function createTranslateLoader(http: HttpClient) {
     VerificationPage,
     ListDailyPage,
     AddDailyPage,
-    DetailDailyPage
+    DetailDailyPage,
+    SoduDailyPage
   ],
    imports: [
     BrowserModule,
@@ -124,7 +126,8 @@ export function createTranslateLoader(http: HttpClient) {
     VerificationPage,
     ListDailyPage,
     AddDailyPage,
-    DetailDailyPage
+    DetailDailyPage,
+    SoduDailyPage
   ],
   providers: [
     StatusBar,

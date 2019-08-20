@@ -9,6 +9,7 @@ import { ToastController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import {ListDailyPage} from '../list_daily/list_daily';
+import {SoduDailyPage} from '../sodu_daily/sodu_daily';
 @Component({
   selector: 'page-detail_daily',
   templateUrl: 'detail_daily.html'
@@ -150,7 +151,9 @@ export class DetailDailyPage {
   }
 
   viewBienDong(){
-
+    this.navCtrl.push(SoduDailyPage,{
+      id:this.dataPage["id"]
+    })
   }
 
   viewLichSu()
