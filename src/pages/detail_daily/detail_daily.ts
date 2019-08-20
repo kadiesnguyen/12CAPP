@@ -10,6 +10,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import {ListDailyPage} from '../list_daily/list_daily';
 import {SoduDailyPage} from '../sodu_daily/sodu_daily';
+import {LichSuGiaoDichDailyPage} from '../lichsu_giaodich_daily/lichsu_giaodich_daily';
 @Component({
   selector: 'page-detail_daily',
   templateUrl: 'detail_daily.html'
@@ -158,7 +159,9 @@ export class DetailDailyPage {
 
   viewLichSu()
   {
-    
+    this.navCtrl.push(LichSuGiaoDichDailyPage,{
+      id:this.dataPage["id"]
+    });
   }
  
 }
