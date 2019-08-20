@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { SignupPage } from '../signup/signup';
-import { ForgotpasswordPage } from '../forgotpassword/forgotpassword';
-import { TabsPage } from '../tabs/tabs';
+import {AddDailyPage} from '../add_daily/add_daily';
 import {Server} from '../../providers/server/server';
 import {Account} from '../../providers/server/account';
 @Component({
@@ -51,6 +49,6 @@ export class ListDailyPage {
   }
 
   openAddDaily(){
-
+    this.navCtrl.push(AddDailyPage);
   }
 }
