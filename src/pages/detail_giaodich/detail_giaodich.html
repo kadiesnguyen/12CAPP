@@ -1,0 +1,45 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title><span text-uppercase class="center">Chi tiết giao dịch</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+        <ion-card>
+                <ion-item>
+                        <div>
+                                <button style="width:150px;height:50px;font-weight: bold;background-color:#007ffe;color:white" ion-button  (click) = "check()" >KIỂM TRA</button>
+                                <button style="width:150px;height:50px;font-weight: bold;background-color:#d92f48;color:white" ion-button  (click)="cancel()">HỦY YÊU CẦU</button>
+                                <button style="width:150px;height:50px;font-weight: bold;background-color:#ffbc20;color:black" ion-button  (click)="delete()">XÓA LỆNH</button>
+                                </div>
+                </ion-item>
+        </ion-card>
+
+
+
+    <ion-card>
+        <ion-label style="font-weight: bold;font-size:30px;text-align: center;color:#3184fe " >THÔNG TIN</ion-label>
+        <ion-item>
+                <ion-label style="margin-left: 20px" color="primary">TT thẻ <span style="color:#34db61">({{status}})</span> : </ion-label>
+                <ion-input disabled ="true" style="color:black" [(ngModel)]="tt_the"></ion-input>
+        </ion-item>
+        <hr>
+        <ion-item>
+                <ion-label style="margin-left: 20px" color="primary">Số điện thoại nạp : </ion-label>
+                <ion-input disabled ="true" [(ngModel)]="phoneNum"></ion-input>
+        </ion-item>
+        <hr>
+        <ion-item>
+                <ion-label style="margin-left: 20px" color="primary">Số tiền đã nạp : </ion-label>
+                <ion-input disabled ="true"  [(ngModel)]="danap"></ion-input>
+        </ion-item>
+        <hr>
+        <ion-item>
+                <ion-label style="margin-left: 20px" color="primary">Kết quả nạp : </ion-label>
+                
+        </ion-item>
+        <div style="height:100px">
+                        <ion-textarea disabled ="true"   [(ngModel)]="result_nap"></ion-textarea>
+        </div>
+    </ion-card>
+</ion-content>

@@ -90,7 +90,7 @@
                     </ion-item>
         <ion-list>
             <ion-item *ngFor = "let item of items">
-                    <ion-label style="text-align:center">{{item['ngay_tao']}}</ion-label>
+                    <ion-label style="text-align:center;font-weight:bold;color:#3184fe" (click)="viewDetail(item['id'])">{{item['ngay_tao']}}</ion-label>
                     <ion-label style="text-align:center">{{item['loai']}}</ion-label>
                     <ion-label style="text-align:center">{{item['tai_khoan_nap']}}</ion-label>
                     <ion-label style="text-align:center">{{item['han_muc']}}</ion-label>
@@ -179,7 +179,7 @@
                             <ion-label style="text-align:center;font-weight:bold;color:white">Ghi chú</ion-label>
                     </ion-item>
                 <ion-item *ngFor = "let item of items">
-                        <ion-label style="text-align:center">{{item['ngay_tao']}}</ion-label>
+                        <ion-label style="text-align:center;font-weight:bold;color:#3184fe" (click)="viewDetailNH(item['id'])">{{item['ngay_tao']}}</ion-label>
                     <ion-label style="text-align:center">{{item['loai']}}</ion-label>
                     <ion-label style="text-align:center">{{item['tai_khoan_nap']}}</ion-label>
                     <ion-label style="text-align:center">{{item['han_muc']}}</ion-label>

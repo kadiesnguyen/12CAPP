@@ -4,6 +4,8 @@ import {Server} from '../../providers/server/server';
 import { ToastController } from 'ionic-angular';
 import { DatePipe } from '@angular/common';
 import { m } from '@angular/core/src/render3';
+import {DetailGiaoDichPage} from '../detail_giaodich/detail_giaodich';
+import {DetailGiaoDichNHPage} from '../detail_giaodich_nh/detail_giaodich_nh';
 @Component({
   selector: 'page-my_orders',
   templateUrl: 'my_orders.html',
@@ -79,6 +81,7 @@ export class My_ordersPage {
           dataItem["han_muc"] = lst[i]["daNap"];
           dataItem["da_nap"] = lst[i]["hanMuc"];
           dataItem["trang_thai"] = lst[i]["status"];
+          dataItem["id"] = lst[i]["id"];
           this.items.push(dataItem);
         }
         
@@ -122,6 +125,7 @@ export class My_ordersPage {
           dataItem["da_nap"] = nf.format(lst[i]["hanMuc"]);
           dataItem["trang_thai"] = lst[i]["status"];
           dataItem["ghi_chu"] = lst[i]["note"];
+          dataItem["id"] = lst[i]["id"];
           this.items.push(dataItem);
         }
         
@@ -131,5 +135,15 @@ export class My_ordersPage {
         this.presentToast(data["msg"]);
       }
     })
+  }
+  viewDetail(id){
+    this.navCtrl.push(DetailGiaoDichPage,{
+      id_giaodich:id
+    });
+  }
+  viewDetailNH(id){
+    this.navCtrl.push(DetailGiaoDichNHPage,{
+      id_giaodich:id
+    });
   }
 }

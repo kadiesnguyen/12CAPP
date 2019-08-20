@@ -7,6 +7,7 @@ import {Account} from '../../providers/server/account';
 import { ToastController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePipe } from '@angular/common';
+import {DetailGiaoDichPage} from '../detail_giaodich/detail_giaodich';
 @Component({
   selector: 'page-lichsu_giaodich_daily',
   templateUrl: 'lichsu_giaodich_daily.html',
@@ -71,14 +72,17 @@ export class LichSuGiaoDichDailyPage {
           dataItem["hanmuc"] = lst[i]["hanMuc_formated"];
           dataItem["hoahong"] = lst[i]["u_sotienHH_formated"];
           dataItem["trangthai"] = lst[i]["status"];
+          dataItem["id"] = lst[i]["id"];
           this.items.push(dataItem);
         }
     }
     })
   }
 
-  chuyenTien(){
-    
+  viewDetail(id){
+    this.navCtrl.push(DetailGiaoDichPage,{
+      id_giaodich:id
+    });
   }
 
 }

@@ -11,6 +11,7 @@ import { AlertController } from 'ionic-angular';
 import {ListDailyPage} from '../list_daily/list_daily';
 import {SoduDailyPage} from '../sodu_daily/sodu_daily';
 import {LichSuGiaoDichDailyPage} from '../lichsu_giaodich_daily/lichsu_giaodich_daily';
+import {Pay_or_sendPage} from '../pay_or_send/pay_or_send';
 @Component({
   selector: 'page-detail_daily',
   templateUrl: 'detail_daily.html'
@@ -36,12 +37,18 @@ export class DetailDailyPage {
   public ngay_tao:string = "";
   public trang_thai:string = "";
   public so_tien:string = "";
-
+  public status_khoa:string = "";
   public dataPage:object;
   constructor(private alertCtrl: AlertController,private toast: ToastController,public myServer:Server,public account:Account,public navCtrl: NavController,public navParams: NavParams) {
-    var vf =Intl.NumberFormat();
+    
 
     this.dataPage = this.navParams.get("dataPage");
+    this.init();
+
+  }
+
+  init(){
+    var vf =Intl.NumberFormat();
     this.ten_daily = this.dataPage["caption"];
     this.login_id = this.dataPage["loginID"];
     this.id = this.dataPage["id"];
@@ -63,8 +70,8 @@ export class DetailDailyPage {
     this.vtts1 = this.dataPage["tyleMua_vtts"];
     this.ftth1 = this.dataPage["tyleMua_ftth"];
 
+    this.status_khoa = this.trang_thai == "khoa"?"Kích Hoạt":"Khóa";
   }
-
   async presentToast(msg) {
     const toast = await this.toast.create({
       message: msg,
@@ -77,7 +84,42 @@ export class DetailDailyPage {
 
   toggleKhoa()
   {
+    var statusNew = "";
+    if(this.trang_thai == "kich-hoat"){
+      statusNew = "khoa";
+    }
+    else{
+      statusNew = "kich-hoat";
+    }
+    let postData = {
+      "id":this.id,
+      "trangThai":statusNew
+    };
+    this.myServer.getRequest("DL/SetTrangThai",postData,(data) =>{
+      var stt = data["stt"];
+      if(stt == 1 ){
+        this.updateStatus();
+      }
+    })
+  }
 
+  updateStatus(){
+    let postData = {
+      "id":this.id
+    };
+    this.myServer.getRequest("DL/Get1DL",postData,(data)=>{
+      var stt = data["stt"];
+      if(stt == 1)
+      {
+        this.dataPage = data["data"];
+        this.init();
+        this.presentToast(data["msg"]);
+      }
+      else
+      {
+        this.presentToast(data["msg"]);
+      }
+    });
   }
 
   capnhat()
@@ -115,8 +157,8 @@ export class DetailDailyPage {
   xoaTaiKhoan()
   {
     let alert = this.alertCtrl.create({
-      title: 'Bạn chắc chắn đây là số trả trước?',
-      message: 'Mọi sai sót do nhập số trả sau hay sai số điện thoại sẽ không được hoàn tiền. Nếu chưa chắc chắn hãy gọi số tổng đài để xác minh lại',
+      title: 'Xác nhận lại!',
+      message: 'Bạn chắc chắn muốn xóa?',
       buttons: [
         {
           text: 'Hủy Bỏ',
@@ -161,6 +203,12 @@ export class DetailDailyPage {
   {
     this.navCtrl.push(LichSuGiaoDichDailyPage,{
       id:this.dataPage["id"]
+    });
+  }
+  openChuyenTien()
+  {
+    this.navCtrl.push(Pay_or_sendPage,{
+      id_nguoi_nhan:this.ten_daily
     });
   }
  

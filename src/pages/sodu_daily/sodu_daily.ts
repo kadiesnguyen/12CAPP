@@ -7,6 +7,7 @@ import {Account} from '../../providers/server/account';
 import { ToastController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePipe } from '@angular/common';
+import {Pay_or_sendPage} from '../pay_or_send/pay_or_send';
 @Component({
   selector: 'page-sodu_daily',
   templateUrl: 'sodu_daily.html',
@@ -73,7 +74,9 @@ export class SoduDailyPage {
   }
 
   chuyenTien(){
-    
+    this.navCtrl.push(Pay_or_sendPage,{
+      id_nguoi_nhan:this.caption
+    });
   }
 
 }

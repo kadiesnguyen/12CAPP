@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController} from 'ionic-angular';
 
 import { PromocodePage } from '../promocode/promocode';
 import {Server} from '../../providers/server/server';
 import { ToastController } from 'ionic-angular';
 import {Events} from 'ionic-angular';
 import {Account} from '../../providers/server/account';
+import { ModalController, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-pay_or_send',
   templateUrl: 'pay_or_send.html'
@@ -17,8 +17,9 @@ export class Pay_or_sendPage {
   public content:string;
   public sotien:string;
   public otp:string;
-  constructor(public account:Account,public events:Events,private toast: ToastController,public myServer:Server,public navCtrl: NavController, public modalCtrl: ModalController) {
-      this.id_nguoi_nhan = "";
+  constructor(public account:Account,public events:Events,private toast: ToastController,public myServer:Server,public navCtrl: NavController, public modalCtrl: ModalController,public navParams: NavParams) {
+    console.log("vao day cai ha:"+this.navParams.get("id_nguoi_nhan"));  
+      this.id_nguoi_nhan = this.navParams.get("id_nguoi_nhan");
       this.content = "";
       this.sotien = "";
       this.otp = "";
