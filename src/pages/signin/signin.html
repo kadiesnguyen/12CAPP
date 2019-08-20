@@ -27,6 +27,10 @@
                 <ion-input [(ngModel)]="pw" type="password" placeholder="{{'password' | translate}}"></ion-input>
                 <h3 item-end (click)="forgotpassword()">{{'forgot' | translate}}</h3>
             </ion-item>
+            <ion-item>
+               
+                <ion-input [(ngModel)]="otp" type="password" placeholder="Otp"></ion-input>
+            </ion-item>
         </ion-list>
         <button text-uppercase ion-button block class="btn" (click)="login()"> {{'sign_in' | translate}}</button>
         <ion-label text-center no-margin>{{error_login}}</ion-label>

@@ -16,11 +16,12 @@ export class Pay_or_sendPage {
   public id_nguoi_nhan:string;
   public content:string;
   public sotien:string;
+  public otp:string;
   constructor(public account:Account,public events:Events,private toast: ToastController,public myServer:Server,public navCtrl: NavController, public modalCtrl: ModalController) {
       this.id_nguoi_nhan = "";
       this.content = "";
       this.sotien = "";
-    
+      this.otp = "";
   }
 
   
@@ -51,7 +52,7 @@ export class Pay_or_sendPage {
       "uid":this.id_nguoi_nhan,
       "sotien":this.sotien,
       "noidung":this.content,
-      "otp":""
+      "otp":this.otp
     };
 
     this.myServer.postRequest("Login/chuyenTien",postData,(data)=>{

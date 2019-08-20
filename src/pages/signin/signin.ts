@@ -14,9 +14,12 @@ export class SigninPage {
 
   public id:string;
   public pw:string;
+  public otp:string;
   public error_login:string;
   constructor(public myServer:Server,public account:Account,public navCtrl: NavController) {
-
+    this.id = "";
+    this.pw = "";
+    this.otp = "";
   }
      
  signup(){
@@ -32,13 +35,13 @@ export class SigninPage {
    
     let postData = {
       "id": this.id,
-      "pw": this.pw
+      "pw": this.pw,
+      "otp":this.otp
   }
   this.myServer.sendRequest("Login/Loginin",postData,(data)=>{
   var stt = data["stt"];
   if(stt == 1)
   {
-    console.log("login thành công");
     this.account.SaveDataLogin(data);
     this.tabs();
   }
