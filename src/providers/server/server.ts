@@ -58,7 +58,7 @@ export class Server {
 			for(let key in postData) {
 				link = link +key+"="+postData[key]+"&";
 			}
-			link = link.substr(0,link.length);
+			link = link.substr(0,link.length-1);
 		}
 		console.log("getRequest:"+link+"=>"+JSON.stringify(postData));
 		this.http.get(link, requestOptions)

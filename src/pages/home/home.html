@@ -1,10 +1,10 @@
-<ion-header class="header_bg bg-transparent">
+<ion-header>
   <!--
   <ion-navbar>
       <ion-title>{{'home' | translate}}</ion-title>
   </ion-navbar>
 -->
-  <ion-list no-lines>
+  <!-- <ion-list no-lines>
       <ion-item class="search" (click)="search()">
           <h2>{{'' | translate}}<span class="text-theme">{{'Tìm kiếm' | translate}}</span></h2>
           <img src="assets/imgs/ic_search.svg" item-end>
@@ -20,8 +20,10 @@
 
       </ion-item>
 
-  </ion-list>
-
+  </ion-list> -->
+  <ion-item style="background:#ffffff">
+    <button style="width:150px;height:50px;font-size:30px;font-weight:bold" ion-button color="#3184fe" (click) = "openListDaily()">ĐẠI LÝ</button>
+</ion-item>
 
 
 </ion-header>
