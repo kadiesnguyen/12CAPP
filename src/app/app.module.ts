@@ -7,6 +7,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import {DetailDailyPage} from '../pages/detail_daily/detail_daily';
 import {AddDailyPage} from '../pages/add_daily/add_daily'
 import {ListDailyPage} from '../pages/list_daily/list_daily'
 import { AccountPage } from '../pages/account/account';
@@ -76,7 +77,8 @@ export function createTranslateLoader(http: HttpClient) {
     TransactionPage,
     VerificationPage,
     ListDailyPage,
-    AddDailyPage
+    AddDailyPage,
+    DetailDailyPage
   ],
    imports: [
     BrowserModule,
@@ -121,7 +123,8 @@ export function createTranslateLoader(http: HttpClient) {
     TransactionPage,
     VerificationPage,
     ListDailyPage,
-    AddDailyPage
+    AddDailyPage,
+    DetailDailyPage
   ],
   providers: [
     StatusBar,

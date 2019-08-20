@@ -54,7 +54,7 @@
     </ion-item>
 <ion-list>
 <ion-item *ngFor = "let item of items">
-    <ion-label style="text-align:center">{{item['login_id']}}</ion-label>
+    <ion-label style="text-align:center;font-weight:bold;color:#3184fe" (click)="viewDetail(item['id'])">{{item['login_id']}}</ion-label>
     <ion-label style="text-align:center">{{item['ten']}}</ion-label>
     <ion-label style="text-align:center">{{item['sotien']}}</ion-label>
     <ion-label style="text-align:center">{{item['ngay_tao']}}</ion-label>
