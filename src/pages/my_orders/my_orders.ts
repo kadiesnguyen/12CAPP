@@ -35,14 +35,24 @@ export class My_ordersPage {
   onSegmentChange(){
     this.items.length = 0;
     var d = new Date();
+    var d1 = new Date();
+    d1.setDate(d1.getDate()+1);
+    
     this.tungay = this.datePipe.transform(d, 'dd/MM/yyyy');
-    this.denngay = this.datePipe.transform(d, 'dd/MM/yyyy');
+    this.denngay = this.datePipe.transform(d1, 'dd/MM/yyyy');
     this.keyword = "";
     this.accountType = "";
     this.tong_da_nap = "0";
     this.tong_giao_dich = "0";
     this.tong_so_tien = "0";
-    
+    if(this.history_tab == "lichsu_giaodich")
+    {
+      this.finding();
+    }
+    else
+    {
+      this.findingGiaRe();
+    }
   }
   async presentToast(msg) {
     const toast = await this.toast.create({

@@ -29,8 +29,10 @@ export class LichSuGiaoDichDailyPage {
   constructor(private datePipe: DatePipe,private toast: ToastController,public myServer:Server,public account:Account,public navCtrl: NavController,public navParams: NavParams) {
     this.id = this.navParams.get("id");
     var d = new Date();
+    var d1 = new Date();
+    d1.setDate(d1.getDate()+1);
     this.tungay = this.datePipe.transform(d, 'dd/MM/yyyy');
-    this.denngay = this.datePipe.transform(d, 'dd/MM/yyyy');
+    this.denngay = this.datePipe.transform(d1, 'dd/MM/yyyy');
     this.finding();
   }
 

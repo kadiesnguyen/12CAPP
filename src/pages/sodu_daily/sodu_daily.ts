@@ -8,6 +8,7 @@ import { ToastController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePipe } from '@angular/common';
 import {Pay_or_sendPage} from '../pay_or_send/pay_or_send';
+import {DetailGiaoDichPage} from '../detail_giaodich/detail_giaodich';
 @Component({
   selector: 'page-sodu_daily',
   templateUrl: 'sodu_daily.html',
@@ -28,8 +29,10 @@ export class SoduDailyPage {
   constructor(private datePipe: DatePipe,private toast: ToastController,public myServer:Server,public account:Account,public navCtrl: NavController,public navParams: NavParams) {
     this.id = this.navParams.get("id");
     var d = new Date();
+    var d1 = new Date();
+    d1.setDate(d1.getDate()+1);
     this.tungay = this.datePipe.transform(d, 'dd/MM/yyyy');
-    this.denngay = this.datePipe.transform(d, 'dd/MM/yyyy');
+    this.denngay = this.datePipe.transform(d1, 'dd/MM/yyyy');
     this.finding();
   }
 
@@ -67,12 +70,15 @@ export class SoduDailyPage {
           dataItem["loai"] = lst[i]["transType"];
           dataItem["sotien"] = lst[i]["money"];
           dataItem["lydo"] = lst[i]["note"];
+          dataItem["id"] = lst[i]["id"];
           this.items.push(dataItem);
         }
     }
     })
   }
-
+  viewDetail(id){
+    
+  }
   chuyenTien(){
     this.navCtrl.push(Pay_or_sendPage,{
       id_nguoi_nhan:this.caption
