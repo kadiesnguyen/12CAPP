@@ -11,6 +11,7 @@ import {PhonerechargePage} from '../phonerecharge/phonerecharge';
 import {Book_ticketPage} from '../book_ticket/book_ticket';
 import {Account} from '../../providers/server/account';
 import { Events } from 'ionic-angular';
+import {AddMomoPage} from '../addmomo/addmomo';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -58,5 +59,7 @@ constructor(public events: Events,public account:Account,public navCtrl: NavCont
   book_ticket(){
         this.navCtrl.push(Book_ticketPage)
   }
-
+  napMomo(){
+      this.navCtrl.push(AddMomoPage)
+  }
 }
