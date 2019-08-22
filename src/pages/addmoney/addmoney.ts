@@ -30,9 +30,10 @@ export class AddmoneyPage {
   public chietkhau_vtts:string;
   public chietkhau_ftth:string;
   public chietkhau_mb:string;
-
+  public chietkhau_vnmb:string;
   private countService:number;
   private chietKhau:number;
+  public hidden:boolean;
   constructor(public account:Account,public events:Events,private toast: ToastController,private alertCtrl: AlertController,public myServer:Server,public navCtrl: NavController, public modalCtrl: ModalController) {
     this.sotienTmp = 0;
     this.accountCanNap = "";
@@ -96,13 +97,44 @@ export class AddmoneyPage {
     else{
       this.chietkhau_mb = "(Bảo Trì)";
     }
+
+    prefix = "vnmb";
+    if(this.dataAdminIsPlaying["theNH_"+prefix]["isPlaying"]){
+      this.chietkhau_vnmb= "("+this.dataGetUIInfo["tyLeNH_"+prefix]+"%)";
+    }
+    else{
+      this.chietkhau_vnmb = "(Bảo Trì)";
+    }
     this.select_operator = "vt";
     this.chietKhau = this.dataGetUIInfo["tyLeNH_"+this.select_operator];
+    
   }
 
+  getOtp(){
+    let postData = {
+      "type":"nh_"+this.select_operator,
+      "sdt":this.accountCanNap
+    }
+    this.myServer.getRequest("CTH/guiOTP",postData,(data)=>{
+      var stt = data["stt"];
+      if(stt == 1){
+        this.presentToast("Lấy mã thành công");
+      }
+      else
+      {
+        this.presentToast(data["msg"]);
+      }
+    });
+  }
   
   onChangeCardType(prefix:any) {
      this.chietKhau = this.dataGetUIInfo["tyLeNH_"+prefix];
+     if(prefix =="mb" || prefix == "vnmb"){
+      this.hidden = true;
+     }
+     else{
+      this.hidden = false;
+     }
   }
   addMoney(money) {
     var nf = Intl.NumberFormat();
@@ -165,7 +197,7 @@ export class AddmoneyPage {
       "menhGia":this.sotienTmp,
       "phoneNum":this.accountCanNap,
       "cardType":"nh_"+this.select_operator,
-      "otp":"",
+      "otp":this.otp,
     };
 
     this.myServer.postRequest("CTH/RegChargeNH",postData,(data)=>{
