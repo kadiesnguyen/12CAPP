@@ -26,6 +26,10 @@ export class Account {
 
     }
 
+    GetID(){
+        return this.id;
+    }
+    
     GetToken()
     {
         return this.token;

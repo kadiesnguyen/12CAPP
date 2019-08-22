@@ -26,7 +26,6 @@ export class My_ordersPage {
   constructor(private datePipe: DatePipe,private toast: ToastController,public myServer:Server,public navCtrl: NavController) {
 
     
-    console.log("ngay:"+Date.now());
     this.history_tab = "lichsu_giaodich";
     
     this.onSegmentChange();
@@ -88,8 +87,8 @@ export class My_ordersPage {
           dataItem["ngay_tao"] = lst[i]["createDate_text"];
           dataItem["loai"] = lst[i]["loaiTaiKhoan"];
           dataItem["tai_khoan_nap"] = lst[i]["taiKhoanCanNap"];
-          dataItem["han_muc"] = lst[i]["daNap"];
-          dataItem["da_nap"] = lst[i]["hanMuc"];
+          dataItem["han_muc"] = lst[i]["hanMuc"];
+          dataItem["da_nap"] = lst[i]["daNap"];
           dataItem["trang_thai"] = lst[i]["status"];
           dataItem["id"] = lst[i]["id"];
           this.items.push(dataItem);

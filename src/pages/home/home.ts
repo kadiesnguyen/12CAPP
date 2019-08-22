@@ -12,6 +12,7 @@ import {Book_ticketPage} from '../book_ticket/book_ticket';
 import {Account} from '../../providers/server/account';
 import { Events } from 'ionic-angular';
 import {AddMomoPage} from '../addmomo/addmomo';
+import {SoduDailyPage} from '../sodu_daily/sodu_daily';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -61,5 +62,10 @@ constructor(public events: Events,public account:Account,public navCtrl: NavCont
   }
   napMomo(){
       this.navCtrl.push(AddMomoPage)
+  }
+  viewBienDong(){
+        this.navCtrl.push(SoduDailyPage,{
+              "id":undefined
+        })
   }
 }
