@@ -11,7 +11,6 @@ import { AlertController } from 'ionic-angular';
 import {ListDailyPage} from '../list_daily/list_daily';
 import {SoduDailyPage} from '../sodu_daily/sodu_daily';
 import {LichSuGiaoDichDailyPage} from '../lichsu_giaodich_daily/lichsu_giaodich_daily';
-import {LichSuGiaoDichDailyNHPage} from '../lichsu_giaodich_daily_nh/lichsu_giaodich_daily_nh';
 import {Pay_or_sendPage} from '../pay_or_send/pay_or_send';
 @Component({
   selector: 'page-detail_daily',
@@ -30,7 +29,6 @@ export class DetailDailyPage {
   public vn1:string = "100";
   public vtts1:string = "100";
   public ftth1:string = "100";
-  public vnmb1:string = "100";
 
   public ten_daily:string = "";
   public login_id:string = "";
@@ -71,7 +69,6 @@ export class DetailDailyPage {
     this.vn1 = this.dataPage["tyleMua_vn"];
     this.vtts1 = this.dataPage["tyleMua_vtts"];
     this.ftth1 = this.dataPage["tyleMua_ftth"];
-    this.vnmb1 = this.dataPage["tyleMua_vnmb"];
 
     this.status_khoa = this.trang_thai == "khoa"?"Kích Hoạt":"Khóa";
   }
@@ -142,7 +139,6 @@ export class DetailDailyPage {
       "tyleMua_vn":this.vn1,
       "tyleMua_vtts":this.vtts1,
       "tyleMua_ftth":this.ftth1,
-      "tyleMua_vnmb":this.vnmb1,
       "note":this.ghi_chu
     }
     this.myServer.getRequest("DL/SuaDL",dataPost,(data)=>{
@@ -206,13 +202,6 @@ export class DetailDailyPage {
   viewLichSu()
   {
     this.navCtrl.push(LichSuGiaoDichDailyPage,{
-      id:this.dataPage["id"]
-    });
-  }
-
-  viewLichSuNH()
-  {
-    this.navCtrl.push(LichSuGiaoDichDailyNHPage,{
       id:this.dataPage["id"]
     });
   }
