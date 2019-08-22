@@ -166,69 +166,205 @@ page-addmoney {
     }
 }
 
-.banner {
-    width: calc(100% - 15px);
-    margin: 11px auto;
-    height: 115px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 0px;
+.header {
+    height: 160px;
 
-    .banner_img {
-        height: 115px;
+    .list {
+        width: calc(100% - 16px);
+        margin: 0 auto;
+        margin-top: 10px;
+
+        .item {
+            margin-bottom: 10px;
+            padding: 5px 12px 5px 12px !important;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .item-inner {
+                .label {
+                    h2 {
+                        font-size: 2.3rem;
+                        font-weight: 500;
+                        margin: 0;
+
+                    }
+
+                    .row {
+                        .col {
+                            padding-bottom: 7px;
+
+                            img {
+                                width: 37px;
+                                margin: 0 auto;
+                                display: block;
+                            }
+
+                            h6 {
+                                font-size: 2rem;
+                                font-weight: 900;
+                                padding-top: 5px;
+                                letter-spacing: 0;
+                            }
+                        }
+                    }
+
+                }
+
+                img {
+                    &[item-end] {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+&.scroll-content {
+    margin-top: 120px !important;
+}
+
+.list {
+    margin-bottom: 10px;
+
+    .item {
+        padding: 2px 16px 2px 16px;
+        border-radius: 10px;
+
+        .item-inner {
+            padding: 0;
+
+            .label {
+                margin: 0;
+                white-space: normal;
+            }
+
+            [item-end] {
+                margin: 0;
+            }
+        }
+    }
+
+    .card {
         width: 100%;
         position: relative;
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: 10px;
+        margin: 0;
+        margin-top: 10px;
+        padding-bottom: 10px;
 
-        img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: -50% !important;
-            right: -50% !important;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-        }
-    }
-
-    .banner_text {
-        color: $white;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        padding: 23px 19px 0 19px;
-
-        h3 {
-            margin: 0;
-            font-size: .8rem;
-            font-weight: 400;
-            letter-spacing: 5px;
+        .card_bg {
+            &.center_img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
         }
 
         h2 {
-            font-size: 2.5rem;
+            position: relative;
+            z-index: 99;
             font-weight: 500;
-            margin-top: 2px;
-            margin-bottom: 5px;
+            font-size: 1.4rem;
+            padding: 0;
+            padding: 18px 15px 21px 15px;
+            color: $white;
         }
 
-        h4 {
-            color: darken($white, 100%);
-            background: $white;
-            border-radius: 50px;
-            margin: 0;
-            display: initial;
-            font-size: .9rem;
-            font-weight: 500;
-            padding: 5px 8px 5px 8px;
+        .item {
+            padding: 8px 8px 8px 8px;
+            width: calc(100%);
+            margin: 0 auto;
+
+            .row {
+                .col {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+
+                }
+            }
+
+            img {
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 6px;
+             }
+
+            h6 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+
         }
 
+        ion-scroll {
+            height: 120px;
+            white-space: nowrap;
+
+            .item {
+                display: inline-block;
+                width: 100%;
+                padding-bottom: 20px;
+                display: inline-block;
+                width: 305px;
+                padding-bottom: 20px;
+                margin: 0 3px;
+                border-radius: 8px;
+
+                &:first-child {
+                    margin-left: 10px;
+                }
+
+                &:last-child {
+                    margin-right: 10px;
+                }
+
+                .label {
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        padding-bottom: 6px;
+                    }
+
+                    h6 {
+                        color: lighten($gray, 5%);
+                        font-weight: 300;
+                        font-size: 1rem;
+                        letter-spacing: .5px;
+                    }
+
+                    .text {
+                        padding-bottom: 8px;
+                        padding-top: 5px;
+
+                        &.d-flex {
+                            align-items: flex-start;
+                        }
+
+                        p {
+                            font-size: 1.12rem;
+                            font-weight: 400;
+                            color: darken($gray, 100%);
+                            width: 60%;
+                        }
+
+                        h4 {
+                            background: $theme-color;
+                            color: $white;
+                            border-radius: 3px;
+                            font-weight: 500;
+                            min-width: 100px;
+                            line-height: 35px;
+                        }
+                    }
+                }
+            }
+        }
     }
-}
-
-}
+}}

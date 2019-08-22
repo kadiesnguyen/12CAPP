@@ -1,11 +1,85 @@
 page-pay_or_send {
-  .header {
-      .toolbar {
-          .title .toolbar-title {
-              font-size: 1.55rem !important;
-          }
-      }
-  }
+    .header {
+        height: 160px;
+
+        .list {
+            width: calc(100% - 16px);
+            margin: 0 auto;
+            margin-top: 10px;
+
+            .item {
+                margin-bottom: 10px;
+                padding: 5px 12px 5px 12px !important;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .item-inner {
+                    .label {
+                        h2 {
+                            font-size: 2.3rem;
+                            font-weight: 500;
+                            margin: 0;
+
+                        }
+
+                        .row {
+                            .col {
+                                padding-bottom: 7px;
+
+                                img {
+                                    width: 37px;
+                                    margin: 0 auto;
+                                    display: block;
+                                }
+
+                                h6 {
+                                    font-size: 2rem;
+                                    font-weight: 900;
+                                    padding-top: 5px;
+                                    letter-spacing: 0;
+                                }
+                            }
+                        }
+
+                    }
+
+                    img {
+                        &[item-end] {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.scroll-content {
+        margin-top: 120px !important;
+    }
+
+    .list {
+        margin-bottom: 10px;
+
+        .item {
+            padding: 2px 16px 2px 16px;
+            border-radius: 10px;
+
+            .item-inner {
+                padding: 0;
+
+                .label {
+                    margin: 0;
+                    white-space: normal;
+                }
+
+                [item-end] {
+                    margin: 0;
+                }
+            }
+        }
+
 
   .form {
       width: calc(100% - 47px);
@@ -230,4 +304,5 @@ page-pay_or_send {
 
       }
   }
+}
 }

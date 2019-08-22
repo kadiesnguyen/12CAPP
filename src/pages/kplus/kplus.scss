@@ -1,137 +1,71 @@
-page-kplus {
+page-home {
+
     .header {
-        .toolbar {
-            .title .toolbar-title {
-                font-size: 1.55rem !important;
-                color: $white !important;
+        height: 160px;
 
-                .icon_box {
-                    margin: 0 -10px;
+        .list {
+            width: calc(100% - 16px);
+            margin: 0 auto;
+            margin-top: 10px;
 
-                    ion-icon {
-                        position: relative;
-                        padding: 0 10px;
-                        padding-top: 5px;
+            .item {
+                margin-bottom: 10px;
+                padding: 5px 12px 5px 12px !important;
 
-                        img {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .item-inner {
+                    .label {
+                        h2 {
+                            font-size: 2.3rem;
+                            font-weight: 500;
                             margin: 0;
+
+                        }
+
+                        .row {
+                            .col {
+                                padding-bottom: 7px;
+
+                                img {
+                                    width: 37px;
+                                    margin: 0 auto;
+                                    display: block;
+                                }
+
+                                h6 {
+                                    font-size: 2rem;
+                                    font-weight: 900;
+                                    padding-top: 5px;
+                                    letter-spacing: 0;
+                                }
+                            }
+                        }
+
+                    }
+
+                    img {
+                        &[item-end] {
                             width: 20px;
-
-                        }
-
-                        .badge {
-                            position: absolute;
-                            top: 0px;
-                            right: 5px;
-                            padding: 2px 4px 2px 4px;
-                            border-radius: 50%;
-                            font-weight: 300;
-                            font-size: 1rem;
-                            background: $red_color;
-
                         }
                     }
                 }
             }
-
-            .back-button .button-inner .back-button-icon {
-                color: $white !important;
-
-            }
-        }
-
-        ion-scroll {
-            height: 43px;
-            white-space: nowrap;
-            margin-top: 16px;
-
-            .segment {
-                justify-content: unset !important;
-                display: block !important;
-                border: none !important;
-                background: none;
-
-                .segment-button {
-                    display: inline-block;
-                    border: none;
-                    height: auto;
-                    text-transform: none;
-                    opacity: .5;
-                    position: relative;
-                    color: darken($white, 0%);
-                    width: auto;
-                    font-size: 1.6rem;
-                    padding-bottom: 2px;
-                    font-weight: 400;
-                    margin: 0 10px;
-
-                    &.segment-activated {
-                        opacity: 1;
-
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            right: 0;
-                            width: 33px;
-                            height: 5px;
-                            border-radius: 50px;
-                            background: $white;
-                            margin: 0 auto;
-                        }
-                    }
-
-                    &:first-child {
-                        margin-left: 20px;
-                    }
-
-                    &:last-child {
-                        margin-right: 20px;
-                    }
-                }
-            }
-        }
-
-        &.header_bg::after {
-            height: 114px;
         }
     }
 
+    &.scroll-content {
+        margin-top: 120px !important;
+    }
+
     .list {
-        margin: 0;
-        margin-top: 10px;
+        margin-bottom: 10px;
 
         .item {
-            padding: 17px 20px 17px 20px;
-            margin: 0 auto;
-            margin-bottom: 7px;
-            border-radius: 8.5px;
-            width: calc(100% - 14px);
-            box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.2);
-
-            .categories_img {
-                position: relative;
-                overflow: hidden;
-                min-width: 47px;
-                width: 47px;
-                height: 47px;
-                border-radius: 50%;
-                margin: 0 !important;
-                margin-right: 17px !important;
-
-                img {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    left: -50% !important;
-                    right: -50% !important;
-                    top: 0;
-                    bottom: 0;
-                    margin: auto;
-                }
-
-            }
+            padding: 2px 16px 2px 16px;
+            border-radius: 10px;
 
             .item-inner {
                 padding: 0;
@@ -139,17 +73,130 @@ page-kplus {
                 .label {
                     margin: 0;
                     white-space: normal;
+                }
 
-                    h2 {
-                        font-size: 1.5rem;
-                        font-weight: 500;
-                        padding-bottom: 2px;
+                [item-end] {
+                    margin: 0;
+                }
+            }
+        }
+
+        .card {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 0;
+            margin-top: 10px;
+            padding-bottom: 10px;
+
+            .card_bg {
+                &.center_img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            h2 {
+                position: relative;
+                z-index: 99;
+                font-weight: 500;
+                font-size: 1.4rem;
+                padding: 0;
+                padding: 18px 15px 21px 15px;
+                color: $white;
+            }
+
+            .item {
+                padding: 8px 8px 8px 8px;
+                width: calc(100%);
+                margin: 0 auto;
+
+                .row {
+                    .col {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: 6px;
+                 }
+
+                h6 {
+                    margin: 0;
+                    font-size: 1.2rem;
+                }
+
+            }
+
+            ion-scroll {
+                height: 120px;
+                white-space: nowrap;
+
+                .item {
+                    display: inline-block;
+                    width: 100%;
+                    padding-bottom: 20px;
+                    display: inline-block;
+                    width: 305px;
+                    padding-bottom: 20px;
+                    margin: 0 3px;
+                    border-radius: 8px;
+
+                    &:first-child {
+                        margin-left: 10px;
                     }
 
-                    p {
-                        font-size: 1.1rem;
-                        color: lighten($gray, 10%);
-                        font-weight: 400;
+                    &:last-child {
+                        margin-right: 10px;
+                    }
+
+                    .label {
+                        h3 {
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                            padding-bottom: 6px;
+                        }
+
+                        h6 {
+                            color: lighten($gray, 5%);
+                            font-weight: 300;
+                            font-size: 1rem;
+                            letter-spacing: .5px;
+                        }
+
+                        .text {
+                            padding-bottom: 8px;
+                            padding-top: 5px;
+
+                            &.d-flex {
+                                align-items: flex-start;
+                            }
+
+                            p {
+                                font-size: 1.12rem;
+                                font-weight: 400;
+                                color: darken($gray, 100%);
+                                width: 60%;
+                            }
+
+                            h4 {
+                                background: $theme-color;
+                                color: $white;
+                                border-radius: 3px;
+                                font-weight: 500;
+                                min-width: 100px;
+                                line-height: 35px;
+                            }
+                        }
                     }
                 }
             }

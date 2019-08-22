@@ -1,32 +1,51 @@
-<ion-header>
-  <!--
-  <ion-navbar>
-      <ion-title>{{'home' | translate}}</ion-title>
-  </ion-navbar>
--->
-  <!-- <ion-list no-lines>
-      <ion-item class="search" (click)="search()">
-          <h2>{{'' | translate}}<span class="text-theme">{{'Tìm kiếm' | translate}}</span></h2>
-          <img src="assets/imgs/ic_search.svg" item-end>
-      </ion-item>
-      <ion-item class="icon_box">
-          <ion-row text-center>
-            <ion-item>
-                <h2 class="d-flex">{{'balance' | translate}} <span class="end">{{balance}}</span></h2>
-
-          </ion-item>
-
-          </ion-row>
-
-      </ion-item>
-
-  </ion-list> -->
-  <ion-item style="background:#ffffff">
-    <button style="width:150px;height:50px;font-size:30px;font-weight:bold" ion-button color="#3184fe" (click) = "openListDaily()">ĐẠI LÝ</button>
-</ion-item>
+ 
 
 
-</ion-header>
+
+
+<ion-header class="header_bg bg-transparent">
+    <!--
+    <ion-navbar>
+        <ion-title>{{'home' | translate}}</ion-title>
+    </ion-navbar>
+  -->
+    <ion-list no-lines>
+        <ion-item class="header_bg bg-transparent" (click)="napMomo()">
+            <h2 class="d-flex">{{'balance' | translate}} <span class="end">{{balance}}</span></h2>
+         </ion-item>
+        <ion-item class="icon_box">
+            <ion-row text-center>
+        
+            <ion-col col-3 (click) = "openListDaily()">
+              <img src="assets/imgs/partner.svg">
+              <h4>{{'partner' | translate}}</h4>
+          </ion-col>
+          <ion-col col-3 (click) = "openAddDaily()">
+              <img src="assets/imgs/partner_add.svg">
+              <h4>{{'partner_add' | translate}}</h4>
+          </ion-col>
+          <ion-col col-3 (click)="napMomo()">
+            <img src="assets/imgs/nap_momo.svg">
+            <h4>{{'nap_momo' | translate}}</h4>
+        </ion-col>
+        <ion-col col-3 (click)="phonerecharge()">
+          <img src="assets/imgs/sent_pay.svg">
+          <h4>{{'sent_payment' | translate}}</h4>
+      </ion-col>
+            </ion-row>
+  
+        </ion-item>
+  
+    </ion-list>
+  
+  
+  
+  </ion-header>
+
+
+
+
+
 
 <ion-content class="bg-color">
   <ion-list no-lines>
@@ -34,26 +53,19 @@
 
           <ion-item>
               <ion-row text-center>
-                  <ion-col col-6 (click)="addmoney()">
+                  <ion-col col-6 ((click)="phonerecharge()">
                       <img src="assets/imgs/ban-tien-gia-re.svg">
-                      <h6></h6>
-                  </ion-col>
-                  <ion-col col-6 (click)="phonerecharge()">
+                   </ion-col>
+                  <ion-col col-6 (click)="addmoney()">
                       <img src="assets/imgs/nap-dt-gia-re.svg">
-                      <h6></h6>
-                  </ion-col>
+                   </ion-col>
                   <ion-col col-6 (click)="napgame()">
                       <img src="assets/imgs/nap-game.svg">
-                      <h6></h6>
-                  </ion-col>
+                   </ion-col>
                   <ion-col col-6 (click)="kplus()">
                       <img src="assets/imgs/nap_k.svg">
-                      <h6></h6>
-                  </ion-col>
-                  <ion-col col-6 (click)="napMomo()">
-                    <img src="assets/imgs/nap-game.svg">
-                    <h6></h6>
-                </ion-col>
+                   </ion-col>
+            
 
 
               </ion-row>

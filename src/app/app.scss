@@ -438,37 +438,37 @@
             }
 
             &:nth-child(1) {
-                background: url(../assets/imgs/home.png);
+                background: url(../assets/imgs/home.svg);
             }
 
             &:nth-child(2) {
-                background: url(../assets/imgs/napgame.png);
+                background: url(../assets/imgs/napgame.svg);
             }
 
             &:nth-child(3) {
-                background: url(../assets/imgs/history.png);
+                background: url(../assets/imgs/history.svg);
             }
 
             &:nth-child(4) {
-                background: url(../assets/imgs/account.png);
+                background: url(../assets/imgs/account.svg);
             }
 
 
 
             &[aria-selected=true] { &:nth-child(1) {
-              background: url(../assets/imgs/home_select.png);
+              background: url(../assets/imgs/home_select.svg);
           }
 
           &:nth-child(2) {
-              background: url(../assets/imgs/napgame_select.png);
+              background: url(../assets/imgs/napgame_select.svg);
           }
 
           &:nth-child(3) {
-              background: url(../assets/imgs/history_select.png);
+              background: url(../assets/imgs/history_select.svg);
           }
 
           &:nth-child(4) {
-              background: url(../assets/imgs/account_select.png);
+              background: url(../assets/imgs/account_select.svg);
           }
 
 
