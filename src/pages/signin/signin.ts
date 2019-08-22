@@ -32,7 +32,6 @@ export class SigninPage {
         this.navCtrl.setRoot(TabsPage)
   } 
   login(){
-   
     let postData = {
       "id": this.id,
       "pw": this.pw,
