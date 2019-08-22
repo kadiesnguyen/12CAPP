@@ -7,7 +7,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import {DoiMkPage} from '../pages/doi_mk/doi_mk';
 import {AddMomoPage} from '../pages/addmomo/addmomo';
 import {DetailGiaoDichPage} from '../pages/detail_giaodich/detail_giaodich';
 import {DetailGiaoDichNHPage} from '../pages/detail_giaodich_nh/detail_giaodich_nh';
@@ -89,8 +88,7 @@ export function createTranslateLoader(http: HttpClient) {
     LichSuGiaoDichDailyPage,
     DetailGiaoDichPage,
     DetailGiaoDichNHPage,
-    AddMomoPage,
-    DoiMkPage
+    AddMomoPage
   ],
    imports: [
     BrowserModule,
@@ -141,8 +139,7 @@ export function createTranslateLoader(http: HttpClient) {
     LichSuGiaoDichDailyPage,
     DetailGiaoDichPage,
     DetailGiaoDichNHPage,
-    AddMomoPage,
-    DoiMkPage
+    AddMomoPage
   ],
   providers: [
     StatusBar,

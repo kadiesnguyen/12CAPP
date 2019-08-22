@@ -32,12 +32,11 @@
  </div>
  <hr>
  <!-- <img-loader [src]="qr_url" ></img-loader> -->
- <ion-card style="margin: auto">
+ <ion-card style="width:50%;height:auto;margin: auto">
     <ion-row>
-        <ion-input style="margin:auto;text-align: center;font-weight: bold;font-size: 30px;border:1px" placeholder="Mã code..."  id="myInput">{{code}}</ion-input>
+        <ion-label style="margin-left:80px;text-align: center;font-weight: bold;font-size: 30px"   id="myInput">{{code}}</ion-label>
         <button style="background:#34db61"  ion-button color="energized" (click)="copyCode('$myInput')"> Copy </button>
     </ion-row>
-    <ion-label style="text-align: center;font-weight: bold;font-size: 15px"   id="myInput">(Điền nội dung trên đây trong tin nhắn khi chuyển tiền)</ion-label>
     <ion-img style="width: 300px;height:300px;
     margin: auto;
     display: block;" [src]="qr_url" ></ion-img>

@@ -9,7 +9,6 @@ import {ConditionPage} from '../condition/condition';
 import {Server} from '../../providers/server/server';
 import { SigninPage } from '../signin/signin';
 import {Account} from '../../providers/server/account';
-import {DoiMkPage} from '../doi_mk/doi_mk';
 @Component({
   selector: 'page-account',
   templateUrl: 'account.html'
@@ -53,12 +52,5 @@ export class AccountPage {
             }
           
             });
-      }
-
-      settingOtp(){
-
-      }
-      changePass(){
-            this.navCtrl.push(DoiMkPage);
       }
 }
