@@ -27,8 +27,22 @@
 
 
 
-             <button ion-button block class="btn" (click)="presentConfirm()"> {{'pay_via_quickpay' | translate}}</button>
+          <button ion-button block class="btn" (click)="presentConfirm()"> {{'pay_via_quickpay' | translate}}</button>
+          
  </div>
+ <hr>
+ <!-- <img-loader [src]="qr_url" ></img-loader> -->
+ <ion-card style="width:50%;height:auto;margin: auto">
+    <ion-row>
+        <ion-label style="margin-left:80px;text-align: center;font-weight: bold;font-size: 30px"   id="myInput">{{code}}</ion-label>
+        <button style="background:#34db61"  ion-button color="energized" (click)="copyCode('$myInput')"> Copy </button>
+    </ion-row>
+    <ion-img style="width: 300px;height:300px;
+    margin: auto;
+    display: block;" [src]="qr_url" ></ion-img>
+    <br>
+    <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="openMomo()"> Mở ứng dụng Momo </button>
+ </ion-card>
   <div class="banner">
       <div class="banner_img">
           <img src="assets/imgs/banner3.png">
