@@ -8,21 +8,19 @@
   <div class="form">
       <ion-list no-lines>
 
-          <ion-item>
-              <ion-input [(ngModel)] = "accountCanNap" type="text" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+          <ion-item text-wrap>
+              <ion-textarea [(ngModel)] = "accountCanNap" type="text" placeholder="{{'enter_phone_number' | translate}}"></ion-textarea>
               <ion-icon class="material-icons" item-end>account_box</ion-icon>
           </ion-item>
-          <ion-item>
+          <ion-item text-wrap>
               <!--                <ion-input type="text" placeholder="{{'select_operator' | translate}}"></ion-input>-->
-              <ion-select [(ngModel)]="select_operator" (ionChange) = "onChangeCardType($event)">
-                  <ion-option value="vt">
-                    Vietel trả truớc {{chietkhau_vt}}</ion-option>
-
-                  <ion-option value="vn">Vinaphone trả truớc {{chietkhau_vn}}</ion-option>
-                  <ion-option value="vtts">Vietel trả sau {{chietkhau_vtts}}</ion-option>
-                  <ion-option value="ftth">Cuớc truyền hình FTTH {{chietkhau_ftth}}</ion-option>
-                  <ion-option value="mb">Nạp Mobi {{chietkhau_mb}}</ion-option>
-                  <ion-option value="vnmb">Nạp VNBM {{chietkhau_vnmb}}</ion-option>
+              <ion-select text-wrap [(ngModel)]="select_operator" (ionChange) = "onChangeCardType($event)">
+                  <ion-option text-wrap value="vt">Vietel trả truớc {{chietkhau_vt}}</ion-option>
+                  <ion-option text-wrap value="vn">Vinaphone trả truớc {{chietkhau_vn}}</ion-option>
+                  <ion-option text-wrap  value="vtts">Vietel trả sau {{chietkhau_vtts}}</ion-option>
+                  <ion-option text-wrap value="ftth">Cuớc truyền hình FTTH {{chietkhau_ftth}}</ion-option>
+                  <ion-option text-wrap  value="mb">Nạp Mobi {{chietkhau_mb}}</ion-option>
+                  <ion-option text-wrap  value="vnmb">Nạp VNBM {{chietkhau_vnmb}}</ion-option>
 
               </ion-select>
               
@@ -40,9 +38,9 @@
 
 
       <form id="calculator-form1">
-          <ion-item id="calculator-input1">
+          <ion-item  text-wrap id="calculator-input1">
               <ion-label></ion-label>
-              <ion-input type="text" placeholder="Số tiền" name="display" [(ngModel)]="sotien">0</ion-input>
+              <ion-textarea type="text" placeholder="Số tiền" name="display" [(ngModel)]="sotien">0</ion-textarea>
           </ion-item>
       </form>
       <hr>

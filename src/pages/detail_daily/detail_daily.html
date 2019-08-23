@@ -7,129 +7,121 @@
 <ion-content class="bg-color">
     <ion-card>
         <ion-label style="font-weight: bold;font-size:30px;text-align: center;color:#3184fe " >THÔNG TIN</ion-label>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">TÊN ĐẠI LÝ :  </ion-label>
-                <ion-input disabled ="true"  [(ngModel)]="ten_daily"></ion-input>
+        <ion-item text-wrap>
+                <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">TÊN ĐẠI LÝ</ion-label>
+                <ion-textarea disabled ="true"  [(ngModel)]="ten_daily"></ion-textarea>
         </ion-item>
         <hr>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">LOGIN ID : </ion-label>
-                <ion-input [(ngModel)]="login_id"></ion-input>
+        <ion-item text-wrap>
+                <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">LOGIN ID</ion-label>
+                <ion-textarea [(ngModel)]="login_id"></ion-textarea>
         </ion-item>
         <hr>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">ID : </ion-label>
-                <ion-input disabled ="true"  [(ngModel)]="id"></ion-input>
+        <ion-item text-wrap>
+                <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">ID</ion-label>
+                <ion-textarea disabled ="true"  [(ngModel)]="id"></ion-textarea>
         </ion-item>
         <hr>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">NGÀY TẠO : </ion-label>
-                <ion-input disabled ="true" [(ngModel)]="ngay_tao"></ion-input>
+        <ion-item text-wrap>
+                <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">NGÀY TẠO</ion-label>
+                <ion-textarea disabled ="true" [(ngModel)]="ngay_tao"></ion-textarea>
         </ion-item>
         <hr>
-        <div>
-                <ion-row>
-                                <ion-label style="margin-left: 35px" color="primary">TRẠNG THÁI : </ion-label>
-                                <ion-input disabled ="true" [(ngModel)]="trang_thai"></ion-input>
+                <ion-item text-wrap>
+                                <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">TRẠNG THÁI</ion-label>
+                                <ion-textarea disabled ="true" [(ngModel)]="trang_thai"></ion-textarea>
                                 <button style="width:150px;height:50px;font-weight: bold;color:white;background-color:#34db61" ion-item  (click) = "toggleKhoa()" >{{status_khoa}}</button>
-                </ion-row>
-        </div>
-        <hr>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">Tỷ lệ chiết khẩu mua tkc (%)</ion-label>
+                </ion-item>
+        <ion-item text-wrap>
+                <ion-label  style="color:#3184fe;font-weight:bold;font-size:20px">Tỷ lệ chiết khẩu mua tkc (%)</ion-label>
                 
         </ion-item>
-        <div>
-                
-                <ion-grid>
-                    <ion-row>
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44" >VT : </ion-label>
-                            <ion-input  [(ngModel)]="vt" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
+        <ion-item>
+                        <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44" >VT : </ion-label>
+                        <ion-input  [(ngModel)]="vt" ></ion-input>
 
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">MB : </ion-label>
-                            <ion-input  [(ngModel)]="mb" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                            
-                    </ion-row>
-                    <hr>
-                    <ion-row>
-                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VN : </ion-label>
-                                <ion-input  [(ngModel)]="vn" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-
+                </ion-item>
+                <ion-item>
+                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">MB : </ion-label>
+                                <ion-input  [(ngModel)]="mb" ></ion-input>
+                </ion-item>
+                <ion-item>
+                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VN : </ion-label>
+                            <ion-input  [(ngModel)]="vn" ></ion-input>       
+                </ion-item>
+                <ion-item>
                                 <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VNTS : </ion-label>
-                                <ion-input [(ngModel)]="vnts" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                    </ion-row>
-                    <hr>
-                    <ion-row>
-                                
-    
-                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">Garena : </ion-label>
-                                <ion-input  [(ngModel)]="garena" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                                
+                                <ion-input [(ngModel)]="vnts" ></ion-input>
+                </ion-item>
+                <ion-item>
+                            
+
+                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">Garena : </ion-label>
+                            <ion-input  [(ngModel)]="garena" ></ion-input>
+                            
+                            
+                </ion-item>
+                <ion-item>
                                 <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">K+ : </ion-label>
-                                <ion-input  [(ngModel)]="kplus" style="width:50;border: 1px solid #818181;border-radius: 10px !important" border:1px ></ion-input>
-                    </ion-row>
-                </ion-grid>
-        </div>
+                                <ion-input  [(ngModel)]="kplus" ></ion-input>
+                </ion-item>
         <hr>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">Tỷ lệ chiết khấu mua thẻ (%)</ion-label>
+        <ion-item text-wrap>
+                <ion-label style="color:#3184fe;font-weight:bold;font-size:20px">Tỷ lệ chiết khấu mua thẻ (%)</ion-label>
                 
         </ion-item>
-        <div>
                 
-                <ion-grid>
-                    <ion-row>
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44" >VT : </ion-label>
-                            <ion-input  [(ngModel)]="vt1" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">MB : </ion-label>
-                            <ion-input  [(ngModel)]="mb1" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                            
-                    </ion-row>
-                    <hr>
-                    <ion-row>
+                <ion-item>
+                        <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44" >VT : </ion-label>
+                        <ion-input  [(ngModel)]="vt1" ></ion-input>
+                        
+                </ion-item>
+                <ion-item>
+                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">MB : </ion-label>
+                                <ion-input  [(ngModel)]="mb1" ></ion-input>
+                </ion-item>
+                <ion-item>
                                 <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VN : </ion-label>
-                                <ion-input  [(ngModel)]="vn1" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
+                                <ion-input  [(ngModel)]="vn1"></ion-input>
 
-                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VTTS : </ion-label>
-                                <ion-input [(ngModel)]="vtts1" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                    </ion-row>
-                    <hr>
-                    <ion-row>
                                 
-    
+                </ion-item>
+                <ion-item>
+                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VTTS : </ion-label>
+                                <ion-input [(ngModel)]="vtts1" ></ion-input>
+                </ion-item>
+                <ion-item>
+                                
+
                                 <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">FTTH : </ion-label>
-                                <ion-input  [(ngModel)]="ftth1" style=" width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-    
+                                <ion-input  [(ngModel)]="ftth1" ></ion-input>
+
+                </ion-item>
+                <ion-item>
+                        
                                 <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VNMB : </ion-label>
-                                <ion-input  [(ngModel)]="vnmb1" style=" width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                    </ion-row>
-                </ion-grid>
-        </div>
+                                <ion-input  [(ngModel)]="vnmb1" ></ion-input>
+                </ion-item>
         <hr>
-        <div>
-                <ion-row>
-                                <ion-label style="margin-left: 35px" color="primary">SỐ TIỀN : </ion-label>
+                <ion-item text-wrap>
+                                <ion-label  color="primary">SỐ TIỀN : </ion-label>
                                 <ion-input disabled ="true" [(ngModel)]="so_tien"></ion-input>
                                 <button style="width:150px;height:50px;font-weight: bold;color:white;background-color:#34db61" ion-item  (click) = "openChuyenTien()" >NẠP TIỀN</button>
-                </ion-row>
-        </div>
+                </ion-item>
         <hr>
-        <ion-item>
+        <ion-item text-wrap>
                 <ion-label style="margin-left: 20px" color="primary">GHI CHÚ : </ion-label>
                 <ion-input disabled ="true" placeholder="Nhập nội dung..." [(ngModel)]="ghi_chu"></ion-input>
         </ion-item>
 
     </ion-card>
     <ion-card>
-        <ion-item>
-                <div>
+        <ion-item text-wrap>
                         <button style="width:150px;height:50px;font-weight: bold;background-color:#007ffe;color:black" ion-button  (click) = "capnhat()" >CẬP NHẬT</button>
                         <button style="width:150px;height:50px;font-weight: bold;background-color:#ffbc20;color:white" ion-button color="secondary" (click)="xoaTaiKhoan()">XÓA TÀI KHOẢN</button>
                         <button style="width:150px;height:50px;font-weight: bold;background-color:#007ffe;color:black" ion-button  (click)="viewBienDong()">BIỂN ĐỘNG SỐ DƯ</button>
                         <button style="width:150px;height:50px;font-weight: bold;background-color:#007ffe;color:black" ion-button  (click)="viewLichSu()">LỊCH SỬ CT</button>
                         <button style="width:150px;height:50px;font-weight: bold;background-color:#007ffe;color:black" ion-button  (click)="viewLichSuNH()">LỊCH SỬ NT</button>
-                </div>
         </ion-item>
     </ion-card>
 </ion-content>

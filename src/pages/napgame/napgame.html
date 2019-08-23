@@ -8,16 +8,15 @@
   <div class="form">
       <ion-list no-lines>
 
-          <ion-item>
-              <ion-input [(ngModel)] = "phoneNum" type="text" placeholder="{{'GARENA DK200 LQ XXXXXXXX' | translate}}" (ionChange) = "onChange($event)"></ion-input>
+          <ion-item text-wrap>
+              <ion-textarea [(ngModel)] = "phoneNum" type="text" placeholder="{{'GARENA DK200 LQ XXXXXXXX' | translate}}" (ionChange) = "onChange($event)"></ion-textarea>
 
           </ion-item>
           <ion-item>
               <!--                <ion-input type="text" placeholder="{{'select_operator' | translate}}"></ion-input>-->
-              <ion-label>{{'select_namegame' | translate}}</ion-label>
+              <ion-label text-wrap>{{'select_namegame' | translate}}</ion-label>
               <ion-select [(ngModel)]="select_operator">
-                  <ion-option value="garena">
-                     Garena {{chietkhau_garena}}</ion-option>
+                  <ion-option value="garena">Garena {{chietkhau_garena}}</ion-option>
                   <ion-option value="vtcg">VTC {{chietkhau_garena}}</ion-option>
                   <ion-option value="vng">Vina Game {{chietkhau_garena}}</ion-option>
                   <ion-option value="gosu">Gosu {{chietkhau_garena}}</ion-option>
@@ -31,9 +30,9 @@
 
 
       <form id="calculator-form1">
-          <ion-item id="calculator-input1">
+          <ion-item  text-wrap id="calculator-input1">
               <ion-label></ion-label>
-              <ion-input type="text" placeholder="0" name="display" [(ngModel)]="sotien">0</ion-input>
+              <ion-textarea type="text" placeholder="0" name="display" [(ngModel)]="sotien">0</ion-textarea>
           </ion-item>
       </form>
 

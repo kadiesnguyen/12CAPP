@@ -13,6 +13,7 @@ import {AddMomoPage} from '../pages/addmomo/addmomo';
 import {DetailGiaoDichPage} from '../pages/detail_giaodich/detail_giaodich';
 import {DetailGiaoDichNHPage} from '../pages/detail_giaodich_nh/detail_giaodich_nh';
 import {LichSuGiaoDichDailyPage} from '../pages/lichsu_giaodich_daily/lichsu_giaodich_daily'
+import {LichSuGiaoDichDailyNHPage} from '../pages/lichsu_giaodich_daily_nh/lichsu_giaodich_daily_nh';
 import {SoduDailyPage} from '../pages/sodu_daily/sodu_daily';
 import {DetailDailyPage} from '../pages/detail_daily/detail_daily';
 import {AddDailyPage} from '../pages/add_daily/add_daily'
@@ -92,7 +93,8 @@ export function createTranslateLoader(http: HttpClient) {
     DetailGiaoDichNHPage,
     AddMomoPage,
     DoiMkPage,
-    SettingOtpPage
+    SettingOtpPage,
+    LichSuGiaoDichDailyNHPage
   ],
    imports: [
     BrowserModule,
@@ -145,7 +147,8 @@ export function createTranslateLoader(http: HttpClient) {
     DetailGiaoDichNHPage,
     AddMomoPage,
     DoiMkPage,
-    SettingOtpPage
+    SettingOtpPage,
+    LichSuGiaoDichDailyNHPage
   ],
   providers: [
     StatusBar,

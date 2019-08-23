@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {ListDailyPage} from '../list_daily/list_daily';
+import {AddDailyPage} from '../add_daily/add_daily';
 import {SearchPage} from '../search/search';
 import {NapgamePage} from '../napgame/napgame';
 import {KplusPage} from '../kplus/kplus';
@@ -29,6 +30,10 @@ constructor(public events: Events,public account:Account,public navCtrl: NavCont
 
   openListDaily(){
       this.navCtrl.push(ListDailyPage)
+  }
+
+  openAddDaily(){
+      this.navCtrl.push(AddDailyPage)
   }
 
   updateSotien(){

@@ -1,4 +1,4 @@
-page-signin {
+page-sody_daily {
     .header .toolbar .title .toolbar-title {
         font-weight: 500 !important;
         color: $white;
@@ -16,7 +16,10 @@ page-signin {
             }
         }
     }
-
+    .fixedLabel {
+        min-height: 20% !important;
+        max-height: 20% !important;
+    }
     .scroll-content {
         margin-top: 0 !important;
     }

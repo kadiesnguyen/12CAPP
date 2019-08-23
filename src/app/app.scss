@@ -46,7 +46,10 @@
     font-weight: 400;
     src: url('../assets/font/material_icons.woff2') format('woff2');
   }
-
+  .alert-ios .alert-radio-label{ white-space: pre-line;}
+  .alert-md .alert-radio-label{ white-space: pre-line;}
+  .alert-wp .alert-radio-label{ white-space: pre-line;}
+  .select-text { white-space: pre-line;}
   .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -329,7 +332,6 @@
                 opacity: 1 !important;
                 margin: 0px;
             }
-
             ion-textarea,
             ion-input {
                 font-size: 1.9rem;
@@ -413,7 +415,6 @@
         }
     }
   }
-
   ion-tabs {
     .tabbar {
         background: darken($white, 0%) !important;

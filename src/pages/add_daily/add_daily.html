@@ -7,52 +7,60 @@
 <ion-content class="bg-color">
     <ion-card>
         <ion-label style="font-weight: bold;font-size:30px;text-align: center;color:#3184fe " >THÔNG TIN</ion-label>
-        <ion-item>
+        <ion-item text-wrap>
                 <ion-label style="margin-left: 20px" color="primary">TÊN ĐẠI LÝ : </ion-label>
                 <ion-input placeholder="Nhập tên..." [(ngModel)]="ten_daily"></ion-input>
-        </ion-item>
+        </ion-item >
         <hr>
-        <ion-item>
+        <ion-item text-wrap>
                 <ion-label style="margin-left: 20px" color="primary">LOGIN ID : </ion-label>
                 <ion-input placeholder="Nhập id..." [(ngModel)]="login_id"></ion-input>
         </ion-item>
         <hr>
-        <ion-item>
+        <ion-item text-wrap>
                 <ion-label style="margin-left: 20px" color="primary">MẬT KHẨU : </ion-label>
                 <ion-input type="password" placeholder="Nhập mật khẩu..." [(ngModel)]="pw"></ion-input>
         </ion-item>
         <hr>
-        <ion-item>
+        <ion-item text-wrap>
                 <ion-label style="margin-left: 20px" color="primary">Tỷ lệ chiết khẩu mua tkc (%)</ion-label>
                 
         </ion-item>
         <div>
                 
-                <ion-grid>
-                    <ion-row>
+                
+                    <ion-item>
                             <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44" >VT : </ion-label>
-                            <ion-input  [(ngModel)]="vt" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
+                            <ion-input  [(ngModel)]="vt"></ion-input>
 
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">MB : </ion-label>
-                            <ion-input  [(ngModel)]="mb" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                        
-                    </ion-row>
-                    <hr>
-                    <ion-row>
-                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VN : </ion-label>
-                                <ion-input  [(ngModel)]="vn" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-    
-                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VNTS : </ion-label>
-                                <ion-input [(ngModel)]="vnts" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                    </ion-row>
-                    <hr><ion-row>
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">Garena : </ion-label>
-                            <ion-input  [(ngModel)]="garena" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
                             
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">K+ : </ion-label>
-                            <ion-input  [(ngModel)]="kplus" style="width:50;border: 1px solid #818181;border-radius: 10px !important" border:1px ></ion-input>
-                    </ion-row>
-                </ion-grid>
+                        
+                    </ion-item>
+                    <ion-item>
+                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">MB : </ion-label>
+                                <ion-input  [(ngModel)]="mb" ></ion-input>
+                    </ion-item>
+                    
+                    <ion-item>
+                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VN : </ion-label>
+                                <ion-input  [(ngModel)]="vn" ></ion-input>
+    
+                                
+                    </ion-item>
+                    <ion-item>
+                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VNTS : </ion-label>
+                                <ion-input [(ngModel)]="vnts" ></ion-input>
+                    </ion-item>
+                    <ion-item>
+                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">Garena : </ion-label>
+                            <ion-input  [(ngModel)]="garena" ></ion-input>
+                            
+                            
+                    </ion-item>
+                    <ion-item>
+                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">K+ : </ion-label>
+                                <ion-input  [(ngModel)]="kplus"  ></ion-input>
+                    </ion-item>
         </div>
         <hr>
         <ion-item>
@@ -60,39 +68,43 @@
                 
         </ion-item>
         <div>
+                        <ion-item>
+                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44" >VT : </ion-label>
+                                <ion-input  [(ngModel)]="vt1" ></ion-input>
+            
+                                        
+            
+                                </ion-item>
+                                <ion-item>
+                                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">MB : </ion-label>
+                                            <ion-input  [(ngModel)]="mb1" ></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VN : </ion-label>
+                                            <ion-input  [(ngModel)]="vn1" ></ion-input>
                 
-                <ion-grid>
-                    <ion-row>
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44" >VT : </ion-label>
-                            <ion-input  [(ngModel)]="vt1" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">MB : </ion-label>
-                            <ion-input  [(ngModel)]="mb1" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-
-                    </ion-row>
-                    <hr>
-                    <ion-row>
-                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VN : </ion-label>
-                                <ion-input  [(ngModel)]="vn1" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-    
-                                <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VTTS : </ion-label>
-                                <ion-input [(ngModel)]="vtts1" style="width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                    </ion-row>
-                    <hr>
-                    <ion-row>
-
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">FTTH : </ion-label>
-                            <ion-input  [(ngModel)]="ftth1" style=" width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-
-                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VNMB : </ion-label>
-                            <ion-input  [(ngModel)]="vnmb1" style=" width:50;border: 1px solid #818181;border-radius: 10px !important"></ion-input>
-                    </ion-row>
-                </ion-grid>
+                                            
+                                </ion-item>
+                                <ion-item>
+                                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VTTS : </ion-label>
+                                            <ion-input [(ngModel)]="vtts1" ></ion-input>
+                                </ion-item>
+                                <ion-item>
+            
+                                        <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">FTTH : </ion-label>
+                                        <ion-input  [(ngModel)]="ftth1" ></ion-input>
+            
+                                        
+                                </ion-item>
+                                <ion-item >
+                                            <ion-label style="margin-left: 20px;font-weight: bold;font-size:20px;color:#ed3a44"  color="primary">VNMB : </ion-label>
+                                            <ion-input  [(ngModel)]="vnmb1" ></ion-input>
+                                </ion-item>
         </div>
         <hr>
-        <ion-item>
+        <ion-item text-wrap>
                 <ion-label style="margin-left: 20px" color="primary">GHI CHÚ : </ion-label>
-                <ion-input placeholder="Nhập nội dung..." [(ngModel)]="ghi_chu"></ion-input>
+                <ion-input text-wrap placeholder="Nhập nội dung..." [(ngModel)]="ghi_chu"></ion-input>
         </ion-item>
 
     </ion-card>

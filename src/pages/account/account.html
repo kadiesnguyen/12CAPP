@@ -3,10 +3,8 @@
         <ion-title>{{'account' | translate}}</ion-title>
 
     </ion-navbar>
-    <div class="profile_box d-flex" (click)="myprofile()">
-        <div class="profile_img">
-            <img src="assets/imgs/profile_pic.png">
-        </div>
+    <div class="profile_box d-flex">
+        
         <div class="name_box">
             <h2>12C Pay</h2>
             <h3>{{'view_profile' | translate}}</h3>
@@ -15,41 +13,37 @@
 </ion-header>
 
 <ion-content class="bg-color">
-        <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="settingOtp()"> Cài đặt OTP </button>
-                <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="changePass()"> Đổi mật khẩu </button>
-    <ion-list no-lines>
+    <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="settingOtp()"> Cài đặt OTP </button>
+            <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="changePass()"> Đổi mật khẩu </button>
+<ion-list no-lines>
 
-        <ion-item (click)="notification()">
-            <div class="icon_box" item-start>
-                <img src="assets/imgs/ic_invite.png">
-            </div>
-            <h2>{{'notifications' | translate}}</h2>
-        </ion-item>
-        <ion-item (click)="help()">
-            <div class="icon_box" item-start>
-                <img src="assets/imgs/ic_help.png">
-            </div>
-            <h2>{{'need_help' | translate}}</h2>
-        </ion-item>
-        <ion-item>
-            <div class="icon_box" item-start>
-                <img src="assets/imgs/ic_rate.png">
-            </div>
-            <h2>{{'rate_us' | translate}}</h2>
-        </ion-item>
-        <ion-item (click)="condition()">
-            <div class="icon_box" item-start>
-                <img src="assets/imgs/ic_guideline.png">
-            </div>
-            <h2>{{'terms_conditions' | translate}}</h2>
-        </ion-item>
-        <ion-item (click)="logout()">
-          <div class="icon_box" item-start>
-              <img src="assets/imgs/exit.png">
-          </div>
-          <h2>{{'logout' | translate}}</h2>
-      </ion-item>
+    <ion-item text-wrap id="calculator-input1">
+        <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">ID: </ion-label>
+        <ion-textarea text-wrap disabled = "true"  type="text" [(ngModel)]="id"></ion-textarea>
+    </ion-item>
+    <ion-item text-wrap id="calculator-input1">
+        <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">Tên hiện thị: </ion-label>
+        <ion-textarea text-wrap disabled = "true" type="text" [(ngModel)]="ten_hienthi"></ion-textarea>
+    </ion-item>
+    <ion-item text-wrap id="calculator-input1">
+        <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">Tham gia: </ion-label>
+        <ion-textarea text-wrap disabled = "true" type="text" [(ngModel)]="tham_gia"></ion-textarea>
+    </ion-item>
+    <ion-item text-wrap id="calculator-input1">
+        <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">Số tiền hiện có: </ion-label>
+        <ion-textarea text-wrap disabled = "true" type="text" [(ngModel)]="sotien"></ion-textarea>
+    </ion-item>
+    <ion-item text-wrap id="calculator-input1">
+        <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">Ghi chú: </ion-label>
+        <ion-textarea text-wrap disabled = "true" type="text" [(ngModel)]="ghi_chu"></ion-textarea>
+    </ion-item>
 
-    </ion-list>
-    
+    <ion-card text-wrap style="background:#fef4ec">
+        <ion-label style="margin-left: 20px;font-size:25px;font-weight: bold" color="red">CHÚ Ý  </ion-label>
+        <ion-label style="margin-left: 20px" color="black">Thông tin tài khoản được admin tạo bạn không thể sửa.  </ion-label>
+ </ion-card>
+</ion-list>
+
+
+
 </ion-content>

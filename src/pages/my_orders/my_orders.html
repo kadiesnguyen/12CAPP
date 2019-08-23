@@ -14,44 +14,30 @@
             
         <ion-list no-lines *ngSwitchCase="'lichsu_giaodich'">
                 <ion-card>
-                        <ion-grid>
-                            <ion-row>
-                                <ion-col>
-                                    <ion-item>
-                                        <ion-label position="fixed">Từ ngày : </ion-label>
-                                        <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "tungay"></ion-input>
-                                    </ion-item>
-                                </ion-col>
-                                <ion-col>
-                                    <ion-item>
-                                        <ion-label position="fixed">Từ Khóa : </ion-label>
-                                        <ion-input type="text" placeholder = "Chọn từ khóa..." [(ngModel)] = "keyword"></ion-input>
-                                    </ion-item>
-                                </ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>
-                                    <ion-item>
-                                        <ion-label position="fixed">Đến Ngày : </ion-label>
-                                        <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "denngay"></ion-input>
-                                    </ion-item>
-                                </ion-col>
-    
-                                <ion-col>
-                                    <ion-item>
-                                        <ion-label position="fixed">Loại Tài Khoản : </ion-label>
-                                        <ion-select [(ngModel)]="accountType" interface="action-sheet">
-                                                <ion-option value="">Tất cả {{sortAll}}</ion-option>
-                                                <ion-option value="mb">Mobi {{sortMb}}</ion-option>
-                                                <ion-option value="vn">Vina {{sortVn}}</ion-option>
-                                                <ion-option value="vt">Viettel{{sortVt}}</ion-option>
-                              
-                                            </ion-select>
-                                    </ion-item>
-                                </ion-col>
-                            </ion-row>
-                            
-                        </ion-grid>
+                        <ion-item>
+                                <ion-label position="fixed">Từ ngày : </ion-label>
+                                <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "tungay"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                                <ion-label position="fixed">Đến Ngày : </ion-label>
+                                <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "denngay"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                                <ion-label position="fixed">Từ Khóa : </ion-label>
+                                <ion-input type="text" placeholder = "Chọn từ khóa..." [(ngModel)] = "keyword"></ion-input>
+                        </ion-item>
+                        
+                        <ion-item>
+                                <ion-label position="fixed">Loại Tài Khoản : </ion-label>
+                                <ion-select [(ngModel)]="accountType" interface="action-sheet">
+                                        <ion-option value="">Tất cả {{sortAll}}</ion-option>
+                                        <ion-option value="mb">Mobi {{sortMb}}</ion-option>
+                                        <ion-option value="vn">Vina {{sortVn}}</ion-option>
+                                        <ion-option value="vt">Viettel{{sortVt}}</ion-option>
+                        
+                                </ion-select>
+                        </ion-item>
+                        
                         <div class = "center">
                                 <button ion-button color="secondary" (click) = "finding()">TÌM KIẾM</button>
                                 <br>
@@ -61,26 +47,16 @@
                         </ion-card>
                         <div>
                             <ion-card >
-                        <ion-grid>
-                            <ion-row>
-                                <ion-col>
-                                        <ion-label class="title_all" style="font-weight:bold;color:#694efe" >Tổng số giao dịch</ion-label>
-                                        <ion-label class="title_all">{{tong_giao_dich}}</ion-label>
-                                </ion-col>
-                                <ion-col>
-                                        <ion-label  class="title_all" style="font-weight:bold;color:#ffc91e"  >Tổng số tiền</ion-label>
-                                        <ion-label class="title_all">{{tong_so_tien}}</ion-label>
-                                </ion-col>
-                                <ion-col>
-                                        <ion-label  class="title_all" style="font-weight:bold;color:#ed3a44" >Tổng đã nạp</ion-label>
-                                        <ion-label class="title_all">{{tong_da_nap}}</ion-label>
-                                </ion-col>
-                            </ion-row>
-                        </ion-grid>
+                                    <ion-label text-wrap class="title_all" style="font-weight:bold;color:#694efe" >Tổng số giao dịch</ion-label>
+                                    <ion-label text-wrap class="title_all">{{tong_giao_dich}}</ion-label>
+                                    <ion-label text-wrap class="title_all" style="font-weight:bold;color:#ffc91e"  >Tổng số tiền</ion-label>
+                                    <ion-label text-wrap class="title_all">{{tong_so_tien}}</ion-label>
+                                    <ion-label text-wrap class="title_all" style="font-weight:bold;color:#ed3a44" >Tổng đã nạp</ion-label>
+                                    <ion-label text-wrap class="title_all">{{tong_da_nap}}</ion-label>
                     </ion-card>
                     </div>
                     
-                    <ion-item style="background:#34db61">
+                    <ion-item text-wrap style="background:#34db61">
                             <ion-label style="text-align:center;font-weight:bold;color:white">Ngày tạo</ion-label>
                             <ion-label style="text-align:center;font-weight:bold;color:white">Loại</ion-label>
                             <ion-label style="text-align:center;font-weight:bold;color:white">Tài khoản nạp</ion-label>
@@ -89,7 +65,7 @@
                             <ion-label style="text-align:center;font-weight:bold;color:white">Trạng thái</ion-label>
                     </ion-item>
         <ion-list>
-            <ion-item *ngFor = "let item of items">
+            <ion-item *ngFor = "let item of items" text-wrap>
                     <ion-label style="text-align:center;font-weight:bold;color:#3184fe" (click)="viewDetail(item['id'])">{{item['ngay_tao']}}</ion-label>
                     <ion-label style="text-align:center">{{item['loai']}}</ion-label>
                     <ion-label style="text-align:center">{{item['tai_khoan_nap']}}</ion-label>
@@ -103,45 +79,30 @@
 
         <ion-list no-lines *ngSwitchCase="'lichsu_napthe'">
                 <ion-card>
-                        <ion-grid>
-                            <ion-row>
-                                    <ion-col>
-                                            <ion-item>
-                                                <ion-label position="fixed">Từ ngày : </ion-label>
-                                                <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "tungay"></ion-input>
-                                            </ion-item>
-                                        </ion-col>
-                                        <ion-col>
-                                            <ion-item>
-                                                <ion-label position="fixed">Từ Khóa : </ion-label>
-                                                <ion-input type="text" placeholder = "Chọn từ khóa..." [(ngModel)] = "keyword"></ion-input>
-                                            </ion-item>
-                                        </ion-col>
-                                    </ion-row>
-                                    <ion-row>
-                                        <ion-col>
-                                            <ion-item>
-                                                <ion-label position="fixed">Đến Ngày : </ion-label>
-                                                <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "denngay"></ion-input>
-                                            </ion-item>
-                                        </ion-col>
-    
-                                <ion-col>
-                                    <ion-item>
-                                        <ion-label position="fixed">Loại Tài Khoản : </ion-label>
-                                        <ion-select [(ngModel)]="accountType" interface="action-sheet">
-                                                <ion-option value="all">Tất cả {{sortAll}}</ion-option>
-                                                <ion-option value="vttt">VT trả trước {{sortVttt}}</ion-option>
-                                                <ion-option value="vn">Vina {{sortVn}}</ion-option>
-                                                <ion-option value="vtts">VT trả sau {{sortVtts}}</ion-option>
-                                                <ion-option value="ftth">Ftth {{sortFtth}}</ion-option>
-                              
-                                            </ion-select>
-                                    </ion-item>
-                                </ion-col>
-                            </ion-row>
+                        <ion-item>
+                                <ion-label position="fixed">Từ ngày : </ion-label>
+                                <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "tungay"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                    <ion-label position="fixed">Đến Ngày : </ion-label>
+                                    <ion-input type="text" placeholder = "Chọn ngày..." [(ngModel)] = "denngay"></ion-input>
+                                </ion-item>
+                            <ion-item>
+                                    <ion-label position="fixed">Từ Khóa : </ion-label>
+                                    <ion-input type="text" placeholder = "Chọn từ khóa..." [(ngModel)] = "keyword"></ion-input>
+                                </ion-item>
+                            <ion-item>
+                                    <ion-label position="fixed">Loại Tài Khoản : </ion-label>
+                                    <ion-select [(ngModel)]="accountType1" interface="action-sheet">
+                                            <ion-option value="all">Tất cả {{sortAll}}</ion-option>
+                                            <ion-option value="vttt">VT trả trước {{sortVttt}}</ion-option>
+                                            <ion-option value="vn">Vina {{sortVn}}</ion-option>
+                                            <ion-option value="vtts">VT trả sau {{sortVtts}}</ion-option>
+                                            <ion-option value="ftth">Ftth {{sortFtth}}</ion-option>
                             
-                        </ion-grid>
+                                        </ion-select>
+                                </ion-item>
+                        
                         <div class = "center">
                                 <button ion-button color="secondary" (click) = "findingGiaRe()">TÌM KIẾM</button>
                                 <br>
@@ -151,22 +112,13 @@
                         </ion-card>
                         <div>
                             <ion-card >
-                        <ion-grid>
-                            <ion-row>
-                                <ion-col>
-                                        <ion-label class="title_all" style="font-weight:bold;color:#694efe" >Tổng số giao dịch</ion-label>
-                                        <ion-label class="title_all">{{tong_giao_dich}}</ion-label>
-                                </ion-col>
-                                <ion-col>
-                                        <ion-label  class="title_all" style="font-weight:bold;color:#ffc91e"  >Tổng số tiền</ion-label>
+                                    <ion-label class="title_all" style="font-weight:bold;color:#694efe" >Tổng số giao dịch</ion-label>
+                                    <ion-label class="title_all">{{tong_giao_dich}}</ion-label>
+                                    <ion-label  class="title_all" style="font-weight:bold;color:#ffc91e"  >Tổng số tiền</ion-label>
                                         <ion-label class="title_all">{{tong_so_tien}}</ion-label>
-                                </ion-col>
-                                <ion-col>
                                         <ion-label  class="title_all" style="font-weight:bold;color:#ed3a44" >Tổng đã nạp</ion-label>
                                         <ion-label class="title_all">{{tong_da_nap}}</ion-label>
-                                </ion-col>
-                            </ion-row>
-                        </ion-grid>
+                      
                     </ion-card>
                     </div>
                     <ion-item style="background:#34db61">

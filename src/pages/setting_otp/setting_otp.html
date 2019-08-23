@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content class="bg-color">
-    <ion-card *ngIf="hidden1">
+    <ion-card text-wrap *ngIf="hidden1">
             <ion-label style="margin-left: 20px" color="primary">Tạo Khóa  </ion-label>
             <button style="margin-left: 20px;width:150px;background:#34db61"  ion-button color="energized" (click)="createNew()"> TẠO KHÓA MỚI </button>
             <ion-label style="margin-left: 20px" color="black">Chú ý, tạo mới khóa chỉ có hiệu lực trong 5 phút  </ion-label>
@@ -24,7 +24,7 @@
         <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="accept()"> LƯU LẠI </button>
      </ion-card>
 
-     <ion-card *ngIf="hidden2">
+     <ion-card text-wrap *ngIf="hidden2">
             <ion-label style="margin-left: 20px" color="red">{{create_date}}  </ion-label>
             <br>
             <ion-label style="margin-left: 20px" color="primary">Trạng thái  </ion-label>
@@ -47,7 +47,7 @@
 
 
 
-     <ion-card *ngIf="hidden3">
+     <ion-card text-wrap *ngIf="hidden3">
             <ion-label style="margin-left: 20px;color:red;font-size:20px" color="red">{{create_date}}  </ion-label>
             <br>
             <ion-label style="margin-left: 20px" color="primary">Trạng thái  </ion-label>

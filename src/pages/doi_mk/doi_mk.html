@@ -5,21 +5,31 @@
 </ion-header>
 
 <ion-content class="bg-color">
-    <ion-card>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">Mật khẩu cũ :  </ion-label>
-                <ion-input type="password"  [(ngModel)]="pw_old"></ion-input>
+    <ion-card text-wrap>
+        <ion-item text-wrap>
+                <ion-label style="color:#3184fe;font-weight:bold;font-size:20px">Mật khẩu cũ</ion-label>
+                
+        </ion-item>
+        <ion-item text-wrap>
+                <ion-textarea type="password" placeholder="Nhập mật khẩu..."  [(ngModel)]="pw_old"></ion-textarea>
+        </ion-item >
+        <hr>
+        <ion-item text-wrap>
+                <ion-label style="color:#3184fe;font-weight:bold;font-size:20px">Mật khẩu mới</ion-label>
+                
+        </ion-item>
+        <ion-item text-wrap>
+                <ion-textarea type="password" placeholder="Nhập mật khẩu..." [(ngModel)]="pw"></ion-textarea>
         </ion-item>
         <hr>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">Mật khẩu mới : </ion-label>
-                <ion-input type="password" [(ngModel)]="pw"></ion-input>
+        <ion-item text-wrap>
+                <ion-label style="color:#3184fe;font-weight:bold;font-size:20px">Xác nhận lại mật khẩu mới</ion-label>
+                
+        </ion-item>
+        <ion-item text-wrap>
+                <ion-textarea type="password" placeholder="Nhập mật khẩu..."  [(ngModel)]="pw_again"></ion-textarea>
         </ion-item>
         <hr>
-        <ion-item>
-                <ion-label style="margin-left: 20px" color="primary">Xác nhận lại mật khẩu mới : </ion-label>
-                <ion-input type="password"  [(ngModel)]="pw_again"></ion-input>
-        </ion-item>
         <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="accept()"> XÁC NHẬN </button>
      </ion-card>
 </ion-content>

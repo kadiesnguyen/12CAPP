@@ -18,6 +18,7 @@ export class My_ordersPage {
   public denngay:string;
   public keyword:string;
   public accountType:string;
+  public accountType1:string;
   public id:string;
   public tong_giao_dich:string;
   public tong_da_nap:string;
@@ -41,6 +42,7 @@ export class My_ordersPage {
     this.denngay = this.datePipe.transform(d1, 'dd/MM/yyyy');
     this.keyword = "";
     this.accountType = "";
+    this.accountType1 = "";
     this.tong_da_nap = "0";
     this.tong_giao_dich = "0";
     this.tong_so_tien = "0";
@@ -87,8 +89,8 @@ export class My_ordersPage {
           dataItem["ngay_tao"] = lst[i]["createDate_text"];
           dataItem["loai"] = lst[i]["loaiTaiKhoan"];
           dataItem["tai_khoan_nap"] = lst[i]["taiKhoanCanNap"];
-          dataItem["han_muc"] = lst[i]["hanMuc"];
-          dataItem["da_nap"] = lst[i]["daNap"];
+          dataItem["han_muc"] = lst[i]["hanMuc_formated"];
+          dataItem["da_nap"] = lst[i]["daNap_formated"];
           dataItem["trang_thai"] = lst[i]["status"];
           dataItem["id"] = lst[i]["id"];
           this.items.push(dataItem);
@@ -109,7 +111,7 @@ export class My_ordersPage {
       "denngay":this.denngay,
       "p":"1",
       "k":this.keyword,
-      "loaitk":this.accountType,
+      "loaitk":this.accountType1,
       "id":"undefined"
     }
     this.myServer.getRequest("CTH/GetListNH",dataPost,(data)=>{
@@ -119,10 +121,9 @@ export class My_ordersPage {
       {
         this.items = [];
         data = data["data"];
-        var nf = Intl.NumberFormat();
-        this.tong_giao_dich = nf.format(data["tatca"]);
-        this.tong_so_tien = nf.format(data["tongtien"]);
-        this.tong_da_nap = nf.format(data["danap"]);
+        this.tong_giao_dich =data["tatca"];
+        this.tong_so_tien = data["tongtien"];
+        this.tong_da_nap = data["danap"];
 
         var lst = data["lst"];
         for(var i=0;i<lst.length;i++){
@@ -130,8 +131,8 @@ export class My_ordersPage {
           dataItem["ngay_tao"] = lst[i]["createDate_text"];
           dataItem["loai"] = lst[i]["loaiTaiKhoan"];
           dataItem["tai_khoan_nap"] = lst[i]["taiKhoanCanNap"];
-          dataItem["han_muc"] = nf.format(lst[i]["daNap"]);
-          dataItem["da_nap"] = nf.format(lst[i]["hanMuc"]);
+          dataItem["han_muc"] = lst[i]["daNap_formated"];
+          dataItem["da_nap"] = lst[i]["hanMuc_formated"];
           dataItem["trang_thai"] = lst[i]["status"];
           dataItem["ghi_chu"] = lst[i]["note"];
           dataItem["id"] = lst[i]["id"];
