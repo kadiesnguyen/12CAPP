@@ -10,6 +10,8 @@ import {Server} from '../../providers/server/server';
 import { SigninPage } from '../signin/signin';
 import {Account} from '../../providers/server/account';
 import {DoiMkPage} from '../doi_mk/doi_mk';
+import {SettingOtpPage} from '../setting_otp/setting_otp';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @Component({
   selector: 'page-account',
   templateUrl: 'account.html'
@@ -56,7 +58,7 @@ export class AccountPage {
       }
 
       settingOtp(){
-
+            this.navCtrl.push(SettingOtpPage);
       }
       changePass(){
             this.navCtrl.push(DoiMkPage);

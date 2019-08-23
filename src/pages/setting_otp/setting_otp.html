@@ -1,0 +1,69 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title><span text-uppercase class="center">THIẾT LẬP OTP</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+    <ion-card *ngIf="hidden1">
+            <ion-label style="margin-left: 20px" color="primary">Tạo Khóa  </ion-label>
+            <button style="margin-left: 20px;width:150px;background:#34db61"  ion-button color="energized" (click)="createNew()"> TẠO KHÓA MỚI </button>
+            <ion-label style="margin-left: 20px" color="black">Chú ý, tạo mới khóa chỉ có hiệu lực trong 5 phút  </ion-label>
+        <hr>
+
+        <ion-label style="margin-left: 20px" color="primary">Quét mã vạch </ion-label>
+        <ion-img style="width: 300px;height:300px;margin: auto;display: block;" [src]="qr_url" ></ion-img>
+        <hr>
+
+        <ion-label style="margin-left: 20px" color="primary">Hoặc key Public </ion-label>
+        <ion-input disable = "true" placeholder="Key" type="text"  [(ngModel)]="key"></ion-input>
+        <hr>
+
+        <ion-label style="margin-left: 20px" color="primary">Điền Otp </ion-label>
+        <ion-input type="text" placeholder="Otp"  [(ngModel)]="otp1"></ion-input>
+        <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="accept()"> LƯU LẠI </button>
+     </ion-card>
+
+     <ion-card *ngIf="hidden2">
+            <ion-label style="margin-left: 20px" color="red">{{create_date}}  </ion-label>
+            <br>
+            <ion-label style="margin-left: 20px" color="primary">Trạng thái  </ion-label>
+            <ion-label style="margin-left: 20px;color:#34db61" >ĐANG BẬT</ion-label>
+        <hr>
+
+        <ion-label style="margin-left: 20px" color="primary">Điền Otp </ion-label>
+        <ion-input type="text" placeholder="Otp"  [(ngModel)]="otp2"></ion-input>
+        <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="offOtp()"> TẮT OTP </button>
+
+        <br>
+        <ion-card style="background:#fef4ec">
+                <ion-label style="margin-left: 20px;font-size:25px;font-weight: bold" color="red">CHÚ Ý  </ion-label>
+                <ion-label style="margin-left: 20px" color="black">OTP chỉ thiết lập được 1 lần ban đầu  </ion-label>
+                <ion-label style="margin-left: 20px" color="black">Nếu bị mất thiết bị xin vui lòng liên hệ quản trị viên để được hướng dẫn đổi OTP  </ion-label>
+         </ion-card>
+         </ion-card>
+
+     
+
+
+
+     <ion-card *ngIf="hidden3">
+            <ion-label style="margin-left: 20px;color:red;font-size:20px" color="red">{{create_date}}  </ion-label>
+            <br>
+            <ion-label style="margin-left: 20px" color="primary">Trạng thái  </ion-label>
+            <ion-label style="margin-left: 20px;color:red"  >ĐANG TẮT</ion-label>
+        <hr>
+
+        <ion-label style="margin-left: 20px" color="primary">Điền Otp </ion-label>
+        <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="onOtp()"> BẬT OTP </button>
+
+        <br>
+     <ion-card style="background:#fef4ec">
+            <ion-label style="margin-left: 20px;font-size:25px;font-weight: bold" color="red">CHÚ Ý  </ion-label>
+            <ion-label style="margin-left: 20px" color="black">OTP chỉ thiết lập được 1 lần ban đầu  </ion-label>
+            <ion-label style="margin-left: 20px" color="black">Nếu bị mất thiết bị xin vui lòng liên hệ quản trị viên để được hướng dẫn đổi OTP  </ion-label>
+     </ion-card>
+     </ion-card>
+
+     
+</ion-content>
