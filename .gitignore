@@ -2,3 +2,4 @@
 www/build/main.css
 *.cmd
 *.cmd
+src/.DS_Store
