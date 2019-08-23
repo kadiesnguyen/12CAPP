@@ -7,6 +7,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import {SettingOtpPage} from '../pages/setting_otp/setting_otp';
 import {DoiMkPage} from '../pages/doi_mk/doi_mk';
 import {AddMomoPage} from '../pages/addmomo/addmomo';
 import {DetailGiaoDichPage} from '../pages/detail_giaodich/detail_giaodich';
@@ -90,7 +91,8 @@ export function createTranslateLoader(http: HttpClient) {
     DetailGiaoDichPage,
     DetailGiaoDichNHPage,
     AddMomoPage,
-    DoiMkPage
+    DoiMkPage,
+    SettingOtpPage
   ],
    imports: [
     BrowserModule,
@@ -142,7 +144,8 @@ export function createTranslateLoader(http: HttpClient) {
     DetailGiaoDichPage,
     DetailGiaoDichNHPage,
     AddMomoPage,
-    DoiMkPage
+    DoiMkPage,
+    SettingOtpPage
   ],
   providers: [
     StatusBar,
