@@ -74,10 +74,8 @@ export class AddMomoPage {
         var stt = data["stt"];
         if(stt == 1){
           data = data["data"];
-          this.account.UpdateSotien(data["st"]);
           this.qr_url = data["qr_url"];
           this.code = data["code"];
-          this.events.publish('updateScreen');
           this.presentToast("Nạp Tiền Thành Công!");
           
         }else{
