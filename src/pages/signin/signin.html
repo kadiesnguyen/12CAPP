@@ -28,6 +28,10 @@
                 <h3 item-end (click)="forgotpassword()">{{'forgot' | translate}}</h3>
             </ion-item>
             <ion-item>
+                <ion-label>Nhớ mật khẩu</ion-label>
+                <ion-toggle [(ngModel)]="isRemember" (ionChange)="notify()"></ion-toggle>
+              </ion-item>
+            <ion-item>
                
                 <ion-input [(ngModel)]="otp" type="password" placeholder="Otp"></ion-input>
             </ion-item>

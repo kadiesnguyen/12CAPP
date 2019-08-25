@@ -7,6 +7,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { IonicStorageModule } from '@ionic/storage';
 import {SettingOtpPage} from '../pages/setting_otp/setting_otp';
 import {DoiMkPage} from '../pages/doi_mk/doi_mk';
 import {AddMomoPage} from '../pages/addmomo/addmomo';
@@ -100,6 +101,7 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
+    IonicStorageModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
