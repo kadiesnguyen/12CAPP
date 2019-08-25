@@ -1,7 +1,10 @@
 <ion-header class="header_bg bg-transparent">
     <ion-navbar>
         <ion-title>{{'account' | translate}}</ion-title>
-
+        
+                <button style="width:100px;background:#34db61"  ion-button color="energized" (click)="settingOtp()"> Cài đặt OTP </button>
+                        <button style="width:100px;background:#34db61"  ion-button color="energized" (click)="changePass()"> Đổi mật khẩu </button>
+                        <button style="width:100px;background:#34db61"  ion-button color="energized" (click)="logout()"> Đăng xuất </button>
     </ion-navbar>
     <div class="profile_box d-flex">
         
@@ -13,8 +16,7 @@
 </ion-header>
 
 <ion-content class="bg-color">
-    <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="settingOtp()"> Cài đặt OTP </button>
-            <button style="width:100%;background:#34db61"  ion-button color="energized" (click)="changePass()"> Đổi mật khẩu </button>
+        
 <ion-list no-lines>
 
     <ion-item text-wrap id="calculator-input1">
@@ -23,7 +25,7 @@
     </ion-item>
     <ion-item text-wrap id="calculator-input1">
         <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">Tên hiện thị: </ion-label>
-        <ion-textarea text-wrap disabled = "true" type="text" [(ngModel)]="ten_hienthi"></ion-textarea>
+        <ion-textarea style="height:50px" text-wrap disabled = "true" type="text" [(ngModel)]="ten_hienthi"></ion-textarea>
     </ion-item>
     <ion-item text-wrap id="calculator-input1">
         <ion-label floating style="color:#3184fe;font-weight:bold;font-size:20px">Tham gia: </ion-label>
