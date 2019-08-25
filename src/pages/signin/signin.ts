@@ -16,9 +16,9 @@ export class SigninPage {
   public pw:string;
   public otp:string;
   public error_login:string;
+
   constructor(public myServer:Server,public account:Account,public navCtrl: NavController) {
-    this.id = "luuthihuyen";
-    this.pw = "123654aac";
+   
     this.otp = "";
   }
      
