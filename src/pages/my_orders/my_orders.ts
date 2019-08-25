@@ -131,8 +131,8 @@ export class My_ordersPage {
           dataItem["ngay_tao"] = lst[i]["createDate_text"];
           dataItem["loai"] = lst[i]["loaiTaiKhoan"];
           dataItem["tai_khoan_nap"] = lst[i]["taiKhoanCanNap"];
-          dataItem["han_muc"] = lst[i]["daNap_formated"];
-          dataItem["da_nap"] = lst[i]["hanMuc_formated"];
+          dataItem["han_muc"] = lst[i]["hanMuc_formated"];
+          dataItem["da_nap"] = lst[i]["daNap_formated"];
           dataItem["trang_thai"] = lst[i]["status"];
           dataItem["ghi_chu"] = lst[i]["note"];
           dataItem["id"] = lst[i]["id"];
